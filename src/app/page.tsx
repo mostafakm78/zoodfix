@@ -1,5 +1,10 @@
+import { Slider } from '@/components/Home/Slider';
 
 
 export default function Home() {
-  return <h1>salam</h1>;
+  return (
+    <div>
+      <Slider />
+    </div>
+  );
 }
