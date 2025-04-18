@@ -9,14 +9,14 @@ import { SearchBar } from './SearchBar';
 import { useState } from 'react';
 
 export const Navbar = () => {
-  const [showSearchBar, setShowSearchBar] = useState<boolean>(false);
+  const [showSearchBar, setShowSearchBar] = useState<boolean>(true);
 
   return (
     <>
       <div className={showSearchBar ? `fixed top-0 left-0 right-0 -translate-y-16 duration-500 z-50` : `fixed top-0 left-0 right-0 z-50 duration-500`}>
         <SearchBar setClose={() => setShowSearchBar(!showSearchBar)} />
       </div>
-      <section className="absolute top-10 px-20 flex justify-evenly items-center w-full">
+      <section className="absolute z-40 top-10 px-20 flex justify-evenly items-center w-full">
         <Link href="">
           <Image src={Logo} alt="Brand Logo" width={250} />
         </Link>
