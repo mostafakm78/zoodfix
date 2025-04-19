@@ -6,15 +6,20 @@ import Ct3 from '../../../public/images/Ct3.png';
 import Ct4 from '../../../public/images/Ct4.png';
 import Link from 'next/link';
 
-export const Products = () => {
+export const Blog = () => {
   return (
-    <section className="container mx-auto px-32">
-      <div className="flex flex-col space-y-3">
-        <Image src={PicDot} alt="corner" width={30} />
-        <div className="text-justify space-y-1.5">
-          <h3 className="text-5xl font-semibold opacity-80">لیـست</h3>
-          <h3 className="text-3xl text-secondery font-semibold">محصولات ما</h3>
+    <section className="container mx-auto px-32 mt-20">
+      <div className="flex items-center justify-between">
+        <div className="flex flex-col space-y-3">
+          <div className="text-justify space-y-1.5">
+            <h3 className="text-3xl font-semibold opacity-80">اخبار و مقالات</h3>
+            <h3 className="text-3xl text-secondery font-semibold">زودفیکس</h3>
+          </div>
+          <Image src={PicDot} alt="corner" width={30} />
         </div>
+        <Link href="" className="ml-16 bg-secondery text-xl px-6 py-2 rounded-full text-background shadow-xl hover:scale-110 duration-200">
+          مشاهده همه
+        </Link>
       </div>
       <div className="flex gap-14 justify-center mt-10">
         <Link href="" className="flex flex-col items-center">

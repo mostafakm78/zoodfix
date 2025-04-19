@@ -1,3 +1,4 @@
+import { Blog } from '@/components/Home/Blog';
 import { Products } from '@/components/Home/Porducts';
 import { Slider } from '@/components/Home/Slider';
 import { WhySection } from '@/components/Home/WhySection';
@@ -10,6 +11,7 @@ export default function Home() {
       <Slider />
       <WhySection />
       <Products />
+      <Blog />
     </div>
   );
 }
