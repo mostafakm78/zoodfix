@@ -76,7 +76,7 @@ export const Navbar = () => {
 
       <section className={isScrolled ? 'w-full z-40 duration-500 translate-y-0 fixed h-20 shadow-lg bg-secondery px-20 flex justify-evenly items-center' : 'w-full z-40 -translate-y-40 fixed h-20 shadow-lg bg-secondery px-20 flex justify-evenly items-center'}>
         <Link href="/">
-          <Image src={Logo} alt="Brand Logo" width={250} />
+          <Image src={Logo} alt="Brand Logo" width={150} />
         </Link>
         <div className="w-2/4 text-background flex space-x-3 justify-start">
           <Link href="/" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
