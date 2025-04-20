@@ -1,5 +1,6 @@
 import { Blog } from '@/components/Home/Blog';
 import { Customers } from '@/components/Home/Customers';
+import { Footer } from '@/components/Home/Footer';
 import { Products } from '@/components/Home/Porducts';
 import { Slider } from '@/components/Home/Slider';
 import { WhySection } from '@/components/Home/WhySection';
@@ -14,6 +15,7 @@ export default function Home() {
       <Products />
       <Blog />
       <Customers />
+      <Footer />
     </div>
   );
 }
