@@ -14,10 +14,6 @@ export const Slider = () => {
   return (
     <div className="relative [&_.swiper-button-next]:ml-24 font-extrabold [&_.swiper-button-next]:hover:scale-110 [&_.swiper-button-prev]:mr-24 [&_.swiper-button-prev]:hover:scale-110">
       <Swiper
-        style={{
-          '--swiper-navigation-color': '#fff',
-          '--swiper-navigation-size': '20px',
-        }}
         spaceBetween={30}
         loop={true}
         effect={'fade'}
