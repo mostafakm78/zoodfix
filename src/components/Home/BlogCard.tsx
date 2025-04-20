@@ -43,9 +43,13 @@ export const BlogCard = () => {
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination, Navigation]}
         breakpoints={{
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
           // برای صفحه‌های بزرگ
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 30,
           },
           // برای صفحه‌های متوسط
