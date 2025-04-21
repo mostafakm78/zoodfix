@@ -6,7 +6,7 @@ import { IoIosArrowBack } from 'react-icons/io';
 export const WhySection = () => {
   return (
     <div className="w-full bg-background shadow-lg lg:p-20 py-10 lg:mb-10 mb-14 lg:rounded-b-[90%]">
-      <div className="flex lg:flex-row flex-col space-y-6 lg:space-y-0 lg:mb-10 items-center lg:p-12">
+      <div className="flex lg:flex-row flex-col justify-center lg:justify-baseline space-y-6 lg:space-y-0 lg:mb-10 items-center lg:p-12">
         <div className="flex flex-col lg:items-start items-center w-full space-y-2 xl:w-2/12 lg:w-3/12">
           <span className="font-semibold text-3xl">چــــــــــرا</span>
           <span className="font-semibold text-3xl animate-pulse text-secondery">زودفیکس ؟</span>
@@ -28,7 +28,7 @@ export const WhySection = () => {
             </Link>
           </div>
         </div>
-        <div className="lg:w-5/12 w-11/12 lg:mr-14">
+        <div className="lg:w-5/12 lg:mr-14">
           <Image src={Why} alt="About Image" width={450} />
         </div>
       </div>

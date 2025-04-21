@@ -29,7 +29,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-4 text-4xl text-yellow-200 mt-4">
+        <div className="flex gap-4 text-4xl mb-6 text-yellow-200 mt-4">
           <Link href="">
             <FaFacebook />
           </Link>
@@ -44,6 +44,11 @@ export const Footer = () => {
           </Link>
           <Link href="">
             <FaFacebookMessenger />
+          </Link>
+        </div>
+        <div className='group inline-block text-background relative cursor-pointer'>
+          <Link href="" className="font-medium relative after:content-[''] after:absolute after:right-0 after:-bottom-1 after:w-0 after:h-[1.8px] after:bg-gray-500 after:transition-all after:duration-500 group-hover:after:w-full group-hover:text-gray-500 duration-500">
+          بازطراحی شده توسط مصطفی کمری
           </Link>
         </div>
       </div>
