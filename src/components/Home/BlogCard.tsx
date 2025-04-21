@@ -33,8 +33,6 @@ export const BlogCard = () => {
   return (
     <>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={40}
         navigation={true}
         loop={true}
         autoplay={{

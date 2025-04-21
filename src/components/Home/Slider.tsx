@@ -12,7 +12,7 @@ import 'swiper/css/thumbs';
 
 export const Slider = () => {
   return (
-    <div className="relative [&_.swiper-button-next]:ml-24 font-extrabold [&_.swiper-button-next]:hover:scale-110 [&_.swiper-button-prev]:mr-24 [&_.swiper-button-prev]:hover:scale-110">
+    <div className="relative lg:[&_.swiper-button-next]:ml-24 font-extrabold [&_.swiper-button-next]:hover:scale-110 lg:[&_.swiper-button-prev]:mr-24 [&_.swiper-button-prev]:hover:scale-110">
       <Swiper
         spaceBetween={30}
         loop={true}

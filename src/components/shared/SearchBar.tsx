@@ -12,7 +12,7 @@ export const SearchBar = ({ setClose }: SearchBarProps) => {
         <button onClick={() => setClose()}>
           <RiCloseLargeFill className="text-black text-2xl cursor-pointer" />
         </button>
-        <div className="flex items-center justify-between rounded-3xl shadow-md p-1 bg-gray-100 w-4/12">
+        <div className="flex items-center justify-between rounded-3xl shadow-md p-1 bg-gray-100 lg:w-4/12">
           <input placeholder="عبارت جستجو را وارد نمایید" className="p-1 outline-none w-full" />
           <button>
             <IoMdSearch className="text-2xl ml-2 cursor-pointer" />
