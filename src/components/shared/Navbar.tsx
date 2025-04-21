@@ -63,7 +63,7 @@ export const Navbar = () => {
           <Link href="" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
             درباره زودفیکس
           </Link>
-          <Link href="" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
+          <Link href="/contact-us" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
             ارتباط با ما
           </Link>
           <Link href="" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
@@ -72,7 +72,7 @@ export const Navbar = () => {
         </div>
       </div>
       {!isScrolled && (
-        <section className={`w-full z-40 bg-secondery lg:h-20 md:h-16 h-12 top-0 absolute xl:px-10 lg:px-0 flex justify-evenly items-center`}>
+        <section className={`w-full z-40 bg-secondery lg:h-20 md:h-16 h-12 xl:px-10 lg:px-0 flex justify-evenly items-center`}>
           <button onClick={() => setSideMenu(!sideMenu)} className="text-background lg:hidden md:text-4xl text-3xl group">
             <HiMiniBars3 className="group-hover:scale-110 duration-200 cursor-pointer" />
           </button>
@@ -92,7 +92,7 @@ export const Navbar = () => {
             <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
               درباره زودفیکس
             </Link>
-            <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
+            <Link href="/contact-us" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
               ارتباط با ما
             </Link>
             <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
@@ -142,7 +142,7 @@ export const Navbar = () => {
           <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
             درباره زودفیکس
           </Link>
-          <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
+          <Link href="/contact-us" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
             ارتباط با ما
           </Link>
           <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">

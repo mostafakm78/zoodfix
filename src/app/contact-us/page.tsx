@@ -1,15 +1,16 @@
+import ContactUs from '@/components/contact-us/ContactUs';
 import { WhySection } from '@/components/Home/WhySection';
 import { Footer } from '@/components/shared/Footer';
 import { Navbar } from '@/components/shared/Navbar';
 
-const ContactUs = () => {
+const ContactUsPage = () => {
   return (
     <>
       <Navbar />
-      <WhySection />
+      <ContactUs />
       <Footer />
     </>
   );
 };
 
-export default ContactUs;
+export default ContactUsPage;
