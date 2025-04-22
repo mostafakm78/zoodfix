@@ -76,7 +76,7 @@ const WorkExperience = () => {
 
           {/* دکمه حذف */}
           {rows.length > 1 && (
-            <button onClick={() => handleRemoveRow(index)} className="absolute -left-6 top-1/2 -translate-y-1/2 text-red-500 hover:scale-110 duration-200" title="حذف ردیف">
+            <button onClick={() => handleRemoveRow(index)} className="absolute -left-6 top-1/2 -translate-y-1/2 text-red-500 font-extrabold hover:scale-110 cursor-pointer duration-200" title="حذف ردیف">
               ✕
             </button>
           )}
