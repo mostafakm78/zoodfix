@@ -90,7 +90,7 @@ export const Footer = () => {
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">آجر و بتن</span>
             </Link>
-            <Link href="" className="flex items-center">
+            <Link href="/about-us" className="flex items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">درباره زودفیکس</span>
             </Link>

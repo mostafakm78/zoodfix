@@ -8,7 +8,7 @@ import WorkExperience from './WorkExperience';
 const Employment = () => {
   return (
     <div className="container mx-auto">
-      <section className="bg-background xl:px-60 px-20 pb-20 pt-32">
+      <section className="bg-background xl:px-60 px-20 pb-20 pt-20">
         <h3 className="text-4xl font-semibold">فرم استخدام</h3>
 
         {/* personal data */}

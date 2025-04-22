@@ -65,7 +65,7 @@ export const BlogCard = () => {
       >
         {Blog.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-background rounded-t-[20px] flex flex-col rounded-b-2xl w-full max-w-[400px]">
+            <div className="bg-third rounded-t-[20px] flex flex-col rounded-b-2xl w-full max-w-[400px]">
               <div className="relative w-full h-[250px]">
                 <Image src={item.image} alt="Blog Photo" className="object-cover w-full h-full rounded-t-[20px]" />
                 <div className="absolute bottom-0 left-0 w-full h-[80px] bg-gradient-to-t rounded-b-[20px] from-black/70 to-transparent"></div>
