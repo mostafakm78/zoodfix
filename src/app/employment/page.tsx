@@ -1,15 +1,15 @@
-import ContactUs from '@/components/contact-us/ContactUs';
+import Employment from '@/components/employment/Employment';
 import { Footer } from '@/components/shared/Footer';
 import { Navbar } from '@/components/shared/Navbar';
 
-const ContactUsPage = () => {
+const EmploymentPage = () => {
   return (
     <>
       <Navbar />
-      <ContactUs />
+      <Employment />
       <Footer />
     </>
   );
 };
 
-export default ContactUsPage;
+export default EmploymentPage;

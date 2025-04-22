@@ -36,7 +36,7 @@ const ContactUs = () => {
         <div className="space-y-8 text-sm lg:text-base opacity-80">
           <h3 className="text-3xl font-semibold">ارسال پیام به ما :</h3>
           <div className="relative">
-            <input type="text" id="fullname" placeholder=" " className="peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-primary" />
+            <input type="text" id="fullname" placeholder=" " className="peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-secondery" />
             <label
               htmlFor="fullname"
               className="absolute right-4 -top-6 text-sm  px-2 text-gray-500 transition-all duration-300
@@ -48,7 +48,7 @@ const ContactUs = () => {
             </label>
           </div>
           <div className="relative">
-            <input type="text" id="phoneNumber" placeholder=" " className="peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-primary" />
+            <input type="text" id="phoneNumber" placeholder=" " className="peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-secondery" />
             <label
               htmlFor="phoneNumber"
               className="absolute right-4 -top-6 text-sm  px-2 text-gray-500 transition-all duration-300
@@ -60,7 +60,7 @@ const ContactUs = () => {
             </label>
           </div>
           <div className="relative">
-            <input type="text" id="title" placeholder=" " className="peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-primary" />
+            <input type="text" id="title" placeholder=" " className="peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-secondery" />
             <label
               htmlFor="title"
               className="absolute right-4 -top-6 text-sm  px-2 text-gray-500 transition-all duration-300
@@ -72,7 +72,7 @@ const ContactUs = () => {
             </label>
           </div>
           <div className="relative mt-10">
-            <textarea id="message" rows={5} placeholder=" " className="peer w-full py-4 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-primary resize-none"></textarea>
+            <textarea id="message" rows={5} placeholder=" " className="peer w-full py-4 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-secondery resize-none"></textarea>
             <label
               htmlFor="message"
               className="absolute right-4 -top-6 text-sm px-2 text-gray-500 transition-all duration-300

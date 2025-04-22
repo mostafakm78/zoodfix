@@ -66,7 +66,7 @@ export const NavbarHome = () => {
           <Link href="/contact-us" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
             ارتباط با ما
           </Link>
-          <Link href="" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
+          <Link href="/employment" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
             استخدام
           </Link>
         </div>
@@ -95,7 +95,7 @@ export const NavbarHome = () => {
             <Link href="/contact-us" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
               ارتباط با ما
             </Link>
-            <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
+            <Link href="/employment" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
               استخدام
             </Link>
           </div>
@@ -145,7 +145,7 @@ export const NavbarHome = () => {
           <Link href="/contact-us" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
             ارتباط با ما
           </Link>
-          <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
+          <Link href="/employment" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
             استخدام
           </Link>
         </div>

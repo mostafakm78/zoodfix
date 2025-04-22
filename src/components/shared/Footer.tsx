@@ -46,9 +46,9 @@ export const Footer = () => {
             <FaFacebookMessenger />
           </Link>
         </div>
-        <div className='group inline-block text-background relative cursor-pointer'>
+        <div className="group inline-block text-background relative cursor-pointer">
           <Link href="" className="font-medium relative after:content-[''] after:absolute after:right-0 after:-bottom-1 after:w-0 after:h-[1.8px] after:bg-gray-500 after:transition-all after:duration-500 group-hover:after:w-full group-hover:text-gray-500 duration-500">
-          بازطراحی شده توسط مصطفی کمری
+            بازطراحی شده توسط مصطفی کمری
           </Link>
         </div>
       </div>
@@ -94,11 +94,11 @@ export const Footer = () => {
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">درباره زودفیکس</span>
             </Link>
-            <Link href="" className="flex items-center">
+            <Link href="/contact-us" className="flex items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">ارتباط با ما</span>
             </Link>
-            <Link href="" className="flex items-center">
+            <Link href="/employment" className="flex items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">فرم استخدام</span>
             </Link>
