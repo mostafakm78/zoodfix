@@ -57,7 +57,7 @@ export const NavbarHome = () => {
           <Link href="" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
             محصولات و خدمات
           </Link>
-          <Link href="" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
+          <Link href="/blog" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
             مقالات
           </Link>
           <Link href="/about-us" className="hover:text-[#28BE31] relative after:absolute hover:scale-110 px-1 py-2 hover:rounded-4xl duration-200 after:content-[''] after:h-[1.5px] after:w-full after:bg-black after:opacity-30 after:rounded-full after:bottom-0 after:right-0">
@@ -86,7 +86,7 @@ export const NavbarHome = () => {
             <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
               محصولات و خدمات
             </Link>
-            <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
+            <Link href="/blog" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
               مقالات
             </Link>
             <Link href="/about-us" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
@@ -136,7 +136,7 @@ export const NavbarHome = () => {
           <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
             محصولات و خدمات
           </Link>
-          <Link href="" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
+          <Link href="/blog" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
             مقالات
           </Link>
           <Link href="/about-us" className="hover:text-[#28BE31] hover:bg-yellow-200 px-1 py-2 hover:rounded-4xl duration-200">
