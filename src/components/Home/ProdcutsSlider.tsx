@@ -11,7 +11,7 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import './styles.css';
 
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,8 +31,7 @@ export const ProductsSlider = () => {
         autoplay={{
           delay: 3000,
         }}
-        pagination={{ clickable: true }}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Navigation]}
         breakpoints={{
           1200: {
             slidesPerView: 4,

@@ -1,15 +1,15 @@
-import SingleBlog from '@/components/blog/SingleBlog';
+import Prodcuts from '@/components/products/Products';
 import { Footer } from '@/components/shared/Footer';
 import { Navbar } from '@/components/shared/Navbar';
 
-const SingleBlogPage = () => {
+const ProductsPage = () => {
   return (
     <>
       <Navbar />
-      <SingleBlog />
+      <Prodcuts />
       <Footer />
     </>
   );
 };
 
-export default SingleBlogPage;
+export default ProductsPage;
