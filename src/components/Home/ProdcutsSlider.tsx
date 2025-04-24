@@ -59,7 +59,7 @@ export const ProductsSlider: React.FC = () => {
             spaceBetween: 20,
           },
         }}
-        className="mySwiper w-full h-[300px]"
+        className="mySwiper w-full h-[300px] [&_.swiper-button-next]:after:text-gray-700 [&_.swiper-button-prev]:after:text-gray-700"
       >
         {/* products slider with map  */}
         {Products.map((product, index) => (
