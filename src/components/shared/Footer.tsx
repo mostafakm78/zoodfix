@@ -56,7 +56,7 @@ export const Footer = () => {
         <h4 className="text-2xl mb-4 text-amber-200">دسترسی سریع</h4>
         <div className="flex gap-6 text-base/relaxed">
           <div>
-            <Link href="" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">خانه</span>
             </Link>
@@ -82,7 +82,7 @@ export const Footer = () => {
             </Link>
           </div>
           <div>
-            <Link href="" className="flex items-center">
+            <Link href="/questions" className="flex items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">سوالات متداول</span>
             </Link>

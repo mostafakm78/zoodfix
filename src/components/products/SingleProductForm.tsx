@@ -96,7 +96,7 @@ const SingleProductForm = () => {
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
-            <button className="py-2 px-10 hover:scale-105 hover:bg-secondery duration-300 bg-gray-700 text-lg text-background rounded-xl">ثبت فرم</button>
+            <button className="py-2 cursor-pointer px-10 hover:scale-105 hover:bg-secondery duration-300 bg-gray-700 text-lg text-background rounded-xl">ثبت فرم</button>
           </div>
         </div>
       </div>
