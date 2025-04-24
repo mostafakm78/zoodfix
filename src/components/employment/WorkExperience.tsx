@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 
+// type of Row
 interface ExperienceRow {
   place: string;
   position: string;
@@ -11,10 +12,12 @@ interface ExperienceRow {
 const WorkExperience = () => {
   const [rows, setRows] = useState<ExperienceRow[]>([{ place: '', position: '', duration: '' }]);
 
+  //   add new row
   const handleAddRow = () => {
     setRows([...rows, { place: '', position: '', duration: '' }]);
   };
 
+  //   remove selected row
   const handleRemoveRow = (index: number) => {
     const newRows = rows.filter((_, i) => i !== index);
     setRows(newRows);
@@ -31,6 +34,7 @@ const WorkExperience = () => {
         </button>
       </div>
 
+      {/* add new row with map  */}
       {rows.map((_, index) => (
         <div key={index} className="relative mb-10 lg:border-0 border lg:rounded-none lg:p-0 rounded-2xl p-2 border-gray-300">
           <div className="grid gap-10 lg:grid-cols-3 w-full text-xl opacity-80">
@@ -74,7 +78,7 @@ const WorkExperience = () => {
             </div>
           </div>
 
-          {/* دکمه حذف */}
+          {/* close button */}
           {rows.length > 1 && (
             <button onClick={() => handleRemoveRow(index)} className="absolute -left-6 top-1/2 -translate-y-1/2 text-red-500 font-extrabold hover:scale-110 cursor-pointer duration-200" title="حذف ردیف">
               ✕

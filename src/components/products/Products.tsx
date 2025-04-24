@@ -1,10 +1,18 @@
 import Link from 'next/link';
-import ProductImage from '../../../public/images/Products/product.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { FaChevronLeft } from 'react-icons/fa6';
 import Pagination from '../blog/Pagination';
 
-const Product = [
+// photo
+import ProductImage from '../../../public/images/Products/product.png';
+
+type ProductItem = {
+  image: StaticImageData;
+  title: string;
+  category: string;
+};
+
+const Product: ProductItem[] = [
   { image: ProductImage, title: 'پلاستر زبره خاکستری 25', category: 'ملات خشک' },
   { image: ProductImage, title: 'پلاستر زبره خاکستری 25', category: 'ملات خشک' },
   { image: ProductImage, title: 'پلاستر زبره خاکستری 25', category: 'ملات خشک' },
@@ -13,10 +21,12 @@ const Product = [
   { image: ProductImage, title: 'پلاستر زبره خاکستری 25', category: 'ملات خشک' },
 ];
 
-const Prodcuts = () => {
+const Prodcuts: React.FC = () => {
   return (
     <div className="container mx-auto">
       <section className="bg-background grid lg:grid-cols-[3fr_8fr] grid-cols-1 gap-10 xl:px-20 px-8 pb-20 pt-20">
+
+        {/* products categories  */}
         <div className="flex flex-col self-start">
           <div className="flex bg-third rounded-xl lg:p-10 p-3 flex-col shadow-lg items-center space-y-2">
             <h4 className='text-lg relative after:content-[""] after:absolute after:w-full after:bg-foreground after:h-0.5 after:-bottom-1 after:right-0 mb-8'>دسته بندی محصولات</h4>
@@ -42,6 +52,8 @@ const Prodcuts = () => {
             </Link>
           </div>
         </div>
+
+        {/* products list  */}
         <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 xl:gap-10 lg:gap-5 gap-8">
           {Product.map((prod, index) => (
             <Link href="" key={index} className="bg-third rounded-t-[20px] shadow-lg hover:ring-1 hover:ring-secondery duration-300 hover:shadow-secondery hover:shadow-lg flex flex-col rounded-b-2xl w-full lg:max-w-[400px]">
@@ -57,6 +69,8 @@ const Prodcuts = () => {
           ))}
         </div>
       </section>
+
+      {/* pagination component  */}
       <Pagination />
     </div>
   );

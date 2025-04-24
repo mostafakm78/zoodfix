@@ -3,10 +3,12 @@ import PicDot from '../../../public/images/pic-dot.png';
 import Link from 'next/link';
 import { BlogCard } from './BlogCard';
 
-export const Blog = () => {
+export const Blog: React.FC = () => {
   return (
     <>
+      {/* blog section on home page */}
       <section className="container mx-auto lg:px-32 px-14 mt-20">
+        {/* title and view all button */}
         <div className="flex items-center justify-between">
           <div className="flex flex-col space-y-3">
             <div className="text-justify space-y-1.5">
@@ -19,6 +21,8 @@ export const Blog = () => {
             مشاهده همه
           </Link>
         </div>
+
+        {/* blog card and slider component */}
         <BlogCard />
       </section>
     </>

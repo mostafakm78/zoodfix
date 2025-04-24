@@ -2,16 +2,19 @@ import Link from 'next/link';
 import { FaRegBookmark } from 'react-icons/fa6';
 import { AiOutlineDownSquare } from 'react-icons/ai';
 
-const SingleBlog = () => {
+const SingleBlog: React.FC = () => {
   return (
     <div className="container mx-auto">
       <section className="bg-background xl:px-60 px-20 pb-20 pt-20">
         <div className="space-y-20">
+            {/* title and description section  */}
           <h3 className="font-bold lg:text-4xl text-2xl">پیام تبریک کارخانه زودفیکس</h3>
           <p className="text-justify lg:text-base/relaxed text-base/loose">
             🌿🌸 نوروز، نویدبخش ساختن و استحکام‌بخش پیوندها 🌸🌿 بهار، فصلی نو از شکوفایی و سرسبزی را به ارمغان می‌آورد و نوروز، پیام‌آور آغازهای تازه و پیوندهای مستحکم‌تر است. ما در کارخانه زودفیکس، با افتخار سالی سرشار از موفقیت، همبستگی و استواری را برای شما آرزو داریم. امیدواریم در سال جدید،
             پیوندهای حرفه‌ای و دوستانه‌تان مستحکم‌تر شود و سازه‌های موفقیت‌تان روزبه‌روز پایدارتر گردد.سال نو مبارک! 🌱✨ با آرزوی سالی سرشار از پیشرفت و سربلندی ✨🌱
           </p>
+
+          {/* same blog section  */}
           <div className="bg-third lg:py-8 py-4 lg:px-16 px-8 shadow-lg flex lg:space-y-8 space-y-4 flex-col min-h-[100px] rounded-lg">
             <div className="flex items-center space-x-3">
               <FaRegBookmark />
@@ -27,6 +30,8 @@ const SingleBlog = () => {
               </Link>
             </div>
           </div>
+
+          {/* form for comment  */}
           <div className="bg-third lg:py-8 py-4 lg:px-16 px-8 shadow-lg flex lg:space-y-8 space-y-4 flex-col min-h-[100px] rounded-lg">
             <div>
               <p className="font-normal relative inline before:content-[''] before:absolute before:rounded-full before:w-2 before:h-2 before:bg-secondery before:bottom-2 before:-right-3 after:content-[''] after:absolute after:bg-black/60 after:w-full after:h-0.5 after:-bottom-1 after:right-0">

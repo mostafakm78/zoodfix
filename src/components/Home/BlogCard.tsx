@@ -1,5 +1,15 @@
 'use client';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import './styles.css';
+
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Image, { StaticImageData } from 'next/image';
+
+// photo
 import One from '../../../public/images/Blog/1.jpg';
 import Two from '../../../public/images/Blog/2.jpg';
 import Three from '../../../public/images/Blog/3.jpg';
@@ -9,16 +19,14 @@ import Six from '../../../public/images/Blog/6.jpg';
 import Seven from '../../../public/images/Blog/7.jpg';
 import Eight from '../../../public/images/Blog/8.jpg';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
-import './styles.css';
+// type of BlogCard
+type BlogItem = {
+  image: StaticImageData;
+  title: string;
+  view: string;
+};
 
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import Image from 'next/image';
-
-const Blog = [
+const Blog: BlogItem[] = [
   { image: One, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
   { image: Two, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
   { image: Three, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
@@ -29,9 +37,10 @@ const Blog = [
   { image: Eight, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
 ];
 
-export const BlogCard = () => {
+export const BlogCard: React.FC = () => {
   return (
     <>
+      {/* slider and settings  */}
       <Swiper
         navigation={true}
         loop={true}
@@ -45,17 +54,14 @@ export const BlogCard = () => {
             slidesPerView: 3,
             spaceBetween: 30,
           },
-          // برای صفحه‌های بزرگ
           1024: {
             slidesPerView: 2,
             spaceBetween: 30,
           },
-          // برای صفحه‌های متوسط
           768: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
-          // برای صفحه‌های کوچک
           480: {
             slidesPerView: 1,
             spaceBetween: 10,
@@ -63,6 +69,7 @@ export const BlogCard = () => {
         }}
         className="mySwiper h-[400px]"
       >
+        {/* all blog card in home page with map  */}
         {Blog.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="bg-third rounded-t-[20px] flex flex-col rounded-b-2xl w-full max-w-[400px]">

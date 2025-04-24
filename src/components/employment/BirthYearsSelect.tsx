@@ -10,14 +10,15 @@ const BirthDatePicker: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const persianYear = currentYear - 621;
 
+  //  persian month array
   const years: number[] = Array.from({ length: persianYear - 1329 }, (_, i) => persianYear - i);
   const months: string[] = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'];
 
-  // گرفتن تعداد روزها در یک ماه خاص
+  // get days for two models month
   const getDaysInMonth = (month: number): number => {
     if (month <= 6) return 31;
     if (month <= 11) return 30;
-    return 29; // اسفند (بدون کبیسه)
+    return 29; // kabise year
   };
 
   useEffect(() => {
@@ -32,7 +33,7 @@ const BirthDatePicker: React.FC = () => {
 
   return (
     <div className="flex justify-between w-ful mt-4 mb-10">
-      {/* سال */}
+      {/* year */}
       <div>
         <label htmlFor="year" className="block mb-2 text-sm text-gray-500">
           سال
@@ -47,7 +48,7 @@ const BirthDatePicker: React.FC = () => {
         </select>
       </div>
 
-      {/* ماه */}
+      {/* month */}
       <div>
         <label htmlFor="month" className="block mb-2 text-sm text-gray-500">
           ماه
@@ -62,7 +63,7 @@ const BirthDatePicker: React.FC = () => {
         </select>
       </div>
 
-      {/* روز */}
+      {/* day */}
       <div>
         <label htmlFor="day" className="block mb-2 text-sm text-gray-500">
           روز

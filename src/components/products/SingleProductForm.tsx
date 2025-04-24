@@ -1,11 +1,13 @@
 import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
-const SingleProductForm = () => {
+const SingleProductForm: React.FC = () => {
   return (
     <div className="flex flex-col gap-8 mt-16">
       <h4 className="text-3xl font-bold">ثبت سفارش :</h4>
       <div className="flex lg:flex-row flex-col items-center gap-8 lg:gap-0 justify-center lg:justify-between">
+
+        {/* right section  */}
         <div className="lg:w-2/4 w-full lg:self-start flex flex-col items-center">
           <span className="lg:text-2xl text-xl font-bold shadow-lg bg-gray-700 text-background py-4 px-6 rounded-4xl">برای ثبت سفارش برای ما پیام ارسال کنید</span>
           <div className="flex flex-col">
@@ -25,6 +27,8 @@ const SingleProductForm = () => {
             </div>
           </div>
         </div>
+
+        {/* left section form  */}
         <div className="bg-third lg:py-8 py-4 lg:px-16 lg:w-2/4 w-full px-8 shadow-lg flex lg:space-y-8 space-y-4 flex-col min-h-[100px] rounded-lg">
           <div>
             <p className="font-normal relative inline before:content-[''] before:absolute before:rounded-full before:w-2 before:h-2 before:bg-secondery before:bottom-2 before:-right-3 after:content-[''] after:absolute after:bg-black/60 after:w-full after:h-0.5 after:-bottom-1 after:right-0">

@@ -1,4 +1,4 @@
-const AboutUs = () => {
+const AboutUs: React.FC = () => {
   return (
     <div className="container mx-auto">
       <section className="bg-background xl:px-60 px-20 pb-20 pt-20">

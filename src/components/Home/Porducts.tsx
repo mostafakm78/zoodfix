@@ -1,10 +1,14 @@
 import Image from 'next/image';
-import PicDot from '../../../public/images/pic-dot.png';
 import { ProductsSlider } from './ProdcutsSlider';
 
-export const Products = () => {
+// photo
+import PicDot from '../../../public/images/pic-dot.png';
+
+export const Products: React.FC = () => {
   return (
+    // products slider section on home page
     <section className="container mx-auto lg:px-32 px-14">
+      {/* products title */}
       <div className="flex flex-col space-y-3">
         <Image src={PicDot} alt="corner" width={30} />
         <div className="text-justify space-y-1.5">
@@ -12,6 +16,8 @@ export const Products = () => {
           <h3 className="md:text-3xl text-xl text-secondery font-semibold">محصولات ما</h3>
         </div>
       </div>
+
+      {/* products slider component  */}
       <ProductsSlider />
     </section>
   );

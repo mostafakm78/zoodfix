@@ -1,12 +1,18 @@
 import Image from 'next/image';
-import Phone from '../../../public/images/phone-ft.png';
-import Work from '../../../public/images/work-Time.png';
 import Link from 'next/link';
 import { FaFacebook, FaFacebookMessenger, FaInstagram, FaTelegram, FaWhatsapp } from 'react-icons/fa';
 
-export const Footer = () => {
+// photos
+import Phone from '../../../public/images/phone-ft.png';
+import Work from '../../../public/images/work-Time.png';
+
+
+export const Footer: React.FC = () => {
   return (
+    // background for footer
     <div className="md:bg-[url('/images/footer.png')] md:bg-transparent bg-secondery bg-cover lg:px-48 px-12 py-20 lg:justify-items-end grid grid-cols-1 lg:grid-cols-2">
+
+        {/* right section  */}
       <div className="flex flex-col lg:mt-44 items-center lg:items-start md:mt-64">
         <h3 className="text-2xl text-amber-200 mb-3">درباره زود فیکس</h3>
         <p className="text-base/relaxed lg:w-10/12 text-justify text-background mb-6">
@@ -52,6 +58,8 @@ export const Footer = () => {
           </Link>
         </div>
       </div>
+
+      {/* left section  */}
       <div className="flex flex-col lg:mt-44 mt-16">
         <h4 className="text-2xl mb-4 text-amber-200">دسترسی سریع</h4>
         <div className="flex gap-6 text-base/relaxed">
@@ -76,7 +84,7 @@ export const Footer = () => {
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">لوازم ساختمان سازی</span>
             </Link>
-            <Link href="" className="flex items-center">
+            <Link href="/agents" className="flex items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">اخذ نمایندگی</span>
             </Link>

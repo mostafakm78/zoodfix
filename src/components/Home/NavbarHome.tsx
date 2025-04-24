@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Logo from '../../../public/images/logo.png';
 import Link from 'next/link';
 import { IoCall } from 'react-icons/io5';
 import { IoMdSearch } from 'react-icons/io';
@@ -10,11 +9,15 @@ import { useEffect, useState } from 'react';
 import { HiMiniBars3 } from 'react-icons/hi2';
 import { IoClose } from 'react-icons/io5';
 
-export const NavbarHome = () => {
+// logo photo
+import Logo from '../../../public/images/logo.png';
+
+export const NavbarHome: React.FC = () => {
   const [showSearchBar, setShowSearchBar] = useState<boolean>(true);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [sideMenu, setSideMenu] = useState<boolean>(false);
 
+  //   show and hide navbar on scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 400) setIsScrolled(true);
@@ -28,6 +31,7 @@ export const NavbarHome = () => {
     };
   }, [isScrolled]);
 
+  //   scroll locked when sidebar is true
   useEffect(() => {
     if (sideMenu) document.body.classList.add('overflow-hidden');
     else document.body.classList.remove('overflow-hidden');
@@ -39,10 +43,15 @@ export const NavbarHome = () => {
 
   return (
     <>
+      {/* overlay for sidebar  */}
       {sideMenu && <div className="fixed inset-0 bg-black/50 z-46" onClick={() => setSideMenu(false)}></div>}
+
+      {/* search bar component */}
       <div className={showSearchBar ? `fixed top-0 left-0 right-0 -translate-y-16 duration-500 z-[48]` : `fixed top-0 left-0 right-0 z-[48] duration-500`}>
         <SearchBar setClose={() => setShowSearchBar(!showSearchBar)} />
       </div>
+
+      {/* sideMenu for mobile and tablet screen  */}
       <div className={sideMenu ? 'fixed z-[47] translate-x-0 duration-500 h-full md:w-2/5 w-3/5 right-0 top-0 bg-third shadow' : 'fixed z-[47] translate-x-full duration-500 h-full md:w-2/5 w-3/5 right-0 top-0 bg-third shadow'}>
         <div className="flex items-center bg-secondery justify-center">
           <Image src={Logo} alt="logo" className="w-1/2 py-6 hover:animate-pulse" />
@@ -71,6 +80,8 @@ export const NavbarHome = () => {
           </Link>
         </div>
       </div>
+
+      {/* navbar absolute style only for slider on home page */}
       {!isScrolled && (
         <section className={`w-full z-40 lg:top-12 top-6 absolute xl:px-10 lg:px-0 flex justify-evenly items-center`}>
           <button onClick={() => setSideMenu(!sideMenu)} className="text-background lg:hidden md:text-4xl text-3xl group">
@@ -118,6 +129,7 @@ export const NavbarHome = () => {
         </section>
       )}
 
+      {/* navbar for scrolled page fixed style  */}
       <section
         className={
           isScrolled ? 'w-full z-40 duration-500 translate-y-0 fixed lg:h-20 md:h-16 h-12 shadow-lg bg-secondery xl:px-10 lg:px-0 flex justify-evenly items-center' : 'w-full z-40 -translate-y-40 fixed md:h-16 h-12 lg:h-20 shadow-lg bg-secondery xl:px-10 lg:px-0 flex justify-evenly items-center'

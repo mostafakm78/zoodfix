@@ -1,7 +1,8 @@
 import BirthYearSelect from './BirthYearsSelect';
 
-const PersonalData = () => {
+const PersonalData: React.FC = () => {
   return (
+    // personal data form
     <div>
       <div className="my-10">
         <p className="font-normal relative inline before:content-[''] before:absolute before:rounded-full before:w-2 before:h-2 before:bg-secondery before:bottom-2 before:-right-3 after:content-[''] after:absolute after:bg-black/60 after:w-full after:h-0.5 after:-bottom-1 after:right-0">
@@ -63,6 +64,8 @@ const PersonalData = () => {
               نام خانوادگی :
             </label>
           </div>
+
+          {/* birthday component  */}
           <BirthYearSelect />
           <div className="flex items-center space-x-8">
             <span className="text-base text-gray-500">وضعیت تاهل :</span>

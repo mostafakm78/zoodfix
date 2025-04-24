@@ -1,6 +1,7 @@
 import Accordion, { AccordionItemType } from './Accordion';
 
 const Question: React.FC = () => {
+    // answer and question array for accordion component
   const faqData: AccordionItemType[] = [
     {
       question: 'چرا زودفیکس؟ چه مزیتی برای مصرف کننده دارد؟',
@@ -56,6 +57,8 @@ const Question: React.FC = () => {
     <div className="container mx-auto">
       <section className="bg-background xl:px-60 px-20 pb-20 pt-20">
         <h3 className="w-full text-xl rounded bg-secondery text-background py-2 px-4">پرسش های متداول</h3>
+
+        {/* accordions section  */}
         <div className="mt-14 px-4 font-semibold">
           <Accordion data={faqData} />
         </div>

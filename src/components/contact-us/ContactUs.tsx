@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
-const ContactUs = () => {
+const ContactUs: React.FC = () => {
   return (
     <div className="container mx-auto">
       <section className="grid lg:grid-cols-2 grid-cols-1 gap-28 bg-background lg:px-60 px-20 pb-20 pt-20">

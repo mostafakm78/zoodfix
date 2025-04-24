@@ -1,30 +1,38 @@
 'use client';
 
-import Ct1 from '../../../public/images/Ct1.png';
-import Ct2 from '../../../public/images/Ct2.png';
-import Ct3 from '../../../public/images/Ct3.png';
-import Ct4 from '../../../public/images/Ct4.png';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import './styles.css';
-
 import { Autoplay, Navigation } from 'swiper/modules';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
-const Products = [
+// photos
+import Ct1 from '../../../public/images/Ct1.png';
+import Ct2 from '../../../public/images/Ct2.png';
+import Ct3 from '../../../public/images/Ct3.png';
+import Ct4 from '../../../public/images/Ct4.png';
+
+// type of products
+type ProductsItem = {
+  image: StaticImageData;
+  link: string;
+  title: string;
+};
+
+const Products: ProductsItem[] = [
   { image: Ct1, link: '/', title: 'سیمان' },
   { image: Ct2, link: '/', title: 'محصولات فروشگاهی' },
   { image: Ct3, link: '/', title: 'ملات خشک' },
   { image: Ct4, link: '/', title: 'چسب ها' },
 ];
 
-export const ProductsSlider = () => {
+export const ProductsSlider: React.FC = () => {
   return (
     <>
+      {/* slider settings  */}
       <Swiper
         navigation={true}
         loop={true}
@@ -37,17 +45,15 @@ export const ProductsSlider = () => {
             slidesPerView: 4,
             spaceBetween: 30,
           },
-          // برای صفحه‌های بزرگ
           1024: {
             slidesPerView: 2,
             spaceBetween: 30,
           },
-          // برای صفحه‌های متوسط
+
           768: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
-          // برای صفحه‌های کوچک
           480: {
             slidesPerView: 1,
             spaceBetween: 20,
@@ -55,6 +61,7 @@ export const ProductsSlider = () => {
         }}
         className="mySwiper w-full h-[300px]"
       >
+        {/* products slider with map  */}
         {Products.map((product, index) => (
           <SwiperSlide key={index}>
             <Link href={product.link} className="flex flex-col items-center">

@@ -1,6 +1,7 @@
 import { RiCloseLargeFill } from 'react-icons/ri';
 import { IoMdSearch } from 'react-icons/io';
 
+// type of searchBarProps from navbar
 type SearchBarProps = {
   setClose: () => void;
 };

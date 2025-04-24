@@ -1,5 +1,6 @@
-const Course = () => {
+const Course: React.FC = () => {
   return (
+    // Course Form 
     <div>
       <div className="my-10">
         <p className="font-normal relative inline before:content-[''] before:absolute before:rounded-full before:w-2 before:h-2 before:bg-secondery before:bottom-2 before:-right-3 after:content-[''] after:absolute after:bg-black/60 after:w-full after:h-0.5 after:-bottom-1 after:right-0">

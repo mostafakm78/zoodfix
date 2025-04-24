@@ -1,5 +1,8 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
+import { BiNews } from 'react-icons/bi';
 
+// photos
 import One from '../../../public/images/Blog/1.jpg';
 import Two from '../../../public/images/Blog/2.jpg';
 import Three from '../../../public/images/Blog/3.jpg';
@@ -8,10 +11,15 @@ import Five from '../../../public/images/Blog/5.jpg';
 import Six from '../../../public/images/Blog/6.jpg';
 import Seven from '../../../public/images/Blog/7.jpg';
 import Eight from '../../../public/images/Blog/8.jpg';
-import Link from 'next/link';
-import { BiNews } from 'react-icons/bi';
 
-const Blogs = [
+type BlogsList = {
+  image: StaticImageData;
+  title: string;
+  view: string;
+  description: string;
+};
+
+const Blogs: BlogsList[] = [
   {
     image: One,
     title: 'پیام تبریک کارخانه زودفیکس',
@@ -62,10 +70,11 @@ const Blogs = [
   },
 ];
 
-const Blog = () => {
+const Blog: React.FC = () => {
   return (
     <div className="container mx-auto">
       <section className="bg-background grid lg:grid-cols-[3fr_8fr] grid-cols-1 gap-10 xl:px-20 px-8 pb-20 pt-20">
+        {/* blog categories  */}
         <div className="bg-third rounded-xl lg:p-10 p-3 self-start shadow-lg">
           <div className="flex flex-col items-center space-y-2">
             <h4 className='text-lg relative after:content-[""] after:absolute after:w-full after:bg-foreground after:h-0.5 after:-bottom-1 after:right-0 mb-8'>دسته بندی مطالب</h4>
@@ -81,6 +90,8 @@ const Blog = () => {
             </Link>
           </div>
         </div>
+
+        {/* blog list  */}
         <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 xl:gap-10 lg:gap-5 gap-8">
           {Blogs.map((blog, index) => (
             <Link href="" key={index} className="bg-third rounded-t-[20px] shadow-lg hover:ring-1 hover:ring-secondery duration-300 hover:shadow-secondery hover:shadow-lg flex flex-col rounded-b-2xl w-full lg:max-w-[400px]">

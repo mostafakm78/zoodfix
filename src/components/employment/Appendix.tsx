@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-const Appendix = () => {
+const Appendix: React.FC = () => {
   const [profileFileName, setProfileFileName] = useState('فایلی انتخاب نشده');
   const [attachmentFileName, setAttachmentFileName] = useState('فایلی انتخاب نشده');
 
@@ -13,7 +13,8 @@ const Appendix = () => {
       </div>
 
       <div className="grid gap-10 lg:grid-cols-2 text-xl opacity-80">
-        {/* تصویر پرسنلی */}
+
+        {/* personal image  */}
         <div className="mb-10">
           <label htmlFor="profileImage" className="block mb-2 text-base text-gray-600">
             تصویر پرسنلی (3 * 4) :
@@ -33,7 +34,7 @@ const Appendix = () => {
           <p className="mt-2 text-sm text-gray-500">{profileFileName}</p>
         </div>
 
-        {/* فایل ضمیمه */}
+        {/* attachment file  */}
         <div className="mb-10">
           <label htmlFor="attachment" className="block mb-2 text-base text-gray-600">
             فایل ضمیمه :
