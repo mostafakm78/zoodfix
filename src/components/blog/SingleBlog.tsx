@@ -1,35 +1,57 @@
 import Link from 'next/link';
 import { FaRegBookmark } from 'react-icons/fa6';
 import { AiOutlineDownSquare } from 'react-icons/ai';
+import Image, { StaticImageData } from 'next/image';
 
-const SingleBlog: React.FC = () => {
+interface Blog {
+  image: StaticImageData;
+  title: string;
+  view: string;
+  content: string;
+  id: number;
+  category: string;
+}
+
+interface SingleBlogProps {
+  blog: Blog;
+  blogs: Blog[];
+}
+
+const SingleBlog: React.FC<SingleBlogProps> = ({ blog, blogs }) => {
+  const relatedBlogs = blogs.filter((b) => blog.category === b.category && b.id !== blog.id);
+
   return (
     <div className="container mx-auto">
       <section className="bg-background xl:px-60 px-20 pb-20 pt-20">
         <div className="space-y-20">
-            {/* title and description section  */}
-          <h3 className="font-bold lg:text-4xl text-2xl">پیام تبریک کارخانه زودفیکس</h3>
-          <p className="text-justify lg:text-base/relaxed text-base/loose">
-            🌿🌸 نوروز، نویدبخش ساختن و استحکام‌بخش پیوندها 🌸🌿 بهار، فصلی نو از شکوفایی و سرسبزی را به ارمغان می‌آورد و نوروز، پیام‌آور آغازهای تازه و پیوندهای مستحکم‌تر است. ما در کارخانه زودفیکس، با افتخار سالی سرشار از موفقیت، همبستگی و استواری را برای شما آرزو داریم. امیدواریم در سال جدید،
-            پیوندهای حرفه‌ای و دوستانه‌تان مستحکم‌تر شود و سازه‌های موفقیت‌تان روزبه‌روز پایدارتر گردد.سال نو مبارک! 🌱✨ با آرزوی سالی سرشار از پیشرفت و سربلندی ✨🌱
-          </p>
+          {/* title and description section  */}
+          <h3 className="font-bold lg:text-4xl text-2xl">{blog.title}</h3>
+          <p className="text-justify lg:text-base/relaxed text-base/loose">{blog.content}</p>
+          <div className="flex items-center justify-center">
+            <Image src={blog.image} alt="blog image" width={500} height={500} />
+          </div>
 
           {/* same blog section  */}
-          <div className="bg-third lg:py-8 py-4 lg:px-16 px-8 shadow-lg flex lg:space-y-8 space-y-4 flex-col min-h-[100px] rounded-lg">
-            <div className="flex items-center space-x-3">
-              <FaRegBookmark />
-              <h4 className="text-lg font-bold">مطالب مرتبط</h4>
+          {relatedBlogs.length > 0 && (
+            <div className="bg-third lg:py-8 py-4 lg:px-16 px-8 shadow-lg flex lg:space-y-8 space-y-4 flex-col min-h-[100px] rounded-lg">
+              <div className="flex items-center space-x-3">
+                <FaRegBookmark />
+                <h4 className="text-lg font-bold">مطالب مرتبط</h4>
+              </div>
+              <div className="flex flex-col">
+                {relatedBlogs.map((item) => (
+                  <Link
+                    key={item.id}
+                    href={`/blog/${item.id}`}
+                    className="hover:bg-secondery relative after:content-[''] after:absolute after:w-full after:h-[1px] after:bottom-0 after:right-0 after:bg-gray-300 hover:after:h-0 hover:after:duration-300 flex items-center space-x-3 lg:py-2 py-1 lg:px-4 px-2 rounded duration-300 hover:text-background"
+                  >
+                    <AiOutlineDownSquare className="text-lg" />
+                    <span>{item.title}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-col">
-              <Link
-                href=""
-                className="hover:bg-secondery relative after:content-[''] after:absolute after:w-full after:h-[1px] after:bottom-0 after:right-0 after:bg-gray-300 hover:after:h-0 hover:after:duration-300 flex items-center space-x-3 lg:py-2 py-1 lg:px-4 px-2 rounded duration-300 hover:text-background"
-              >
-                <AiOutlineDownSquare className="text-lg" />
-                <span>کارخانه تولید ملات در شیراز</span>
-              </Link>
-            </div>
-          </div>
+          )}
 
           {/* form for comment  */}
           <div className="bg-third lg:py-8 py-4 lg:px-16 px-8 shadow-lg flex lg:space-y-8 space-y-4 flex-col min-h-[100px] rounded-lg">
@@ -79,7 +101,7 @@ const SingleBlog: React.FC = () => {
               </div>
             </div>
             <div className="w-full flex items-center justify-center">
-              <button className="py-2 px-10 hover:scale-105 hover:bg-secondery duration-300 bg-gray-700 text-lg text-background rounded-xl">ثبت نظر</button>
+              <button className="py-2 px-10 cursor-pointer hover:scale-105 hover:bg-secondery duration-300 bg-gray-700 text-lg text-background rounded-xl">ثبت نظر</button>
             </div>
           </div>
         </div>

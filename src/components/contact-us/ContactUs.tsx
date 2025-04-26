@@ -82,7 +82,7 @@ const ContactUs: React.FC = () => {
               پیام شما :
             </label>
           </div>
-          <button className="cursor-pointer bg-foreground text-background py-2 px-4 text-lg rounded-xl hover:scale-105 hover:opacity-90 duration-300">ارسال پیام</button>
+          <button className="cursor-pointer hover:bg-secondery bg-foreground text-background py-2 px-4 text-lg rounded-xl hover:scale-105 hover:opacity-90 duration-300">ارسال پیام</button>
         </div>
       </section>
     </div>

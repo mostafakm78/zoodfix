@@ -6,13 +6,11 @@ import { FaFacebook, FaFacebookMessenger, FaInstagram, FaTelegram, FaWhatsapp } 
 import Phone from '../../../public/images/phone-ft.png';
 import Work from '../../../public/images/work-Time.png';
 
-
 export const Footer: React.FC = () => {
   return (
     // background for footer
     <div className="md:bg-[url('/images/footer.png')] md:bg-transparent bg-secondery bg-cover lg:px-48 px-12 py-20 lg:justify-items-end grid grid-cols-1 lg:grid-cols-2">
-
-        {/* right section  */}
+      {/* right section  */}
       <div className="flex flex-col lg:mt-44 items-center lg:items-start md:mt-64">
         <h3 className="text-2xl text-amber-200 mb-3">درباره زود فیکس</h3>
         <p className="text-base/relaxed lg:w-10/12 text-justify text-background mb-6">
@@ -52,8 +50,18 @@ export const Footer: React.FC = () => {
             <FaFacebookMessenger />
           </Link>
         </div>
-        <div className="group inline-block text-background relative cursor-pointer">
-          <Link href="" className="font-medium relative after:content-[''] after:absolute after:right-0 after:-bottom-1 after:w-0 after:h-[1.8px] after:bg-gray-500 after:transition-all after:duration-500 group-hover:after:w-full group-hover:text-gray-500 duration-500">
+        <div className="group inline-block relative overflow-hidden text-background cursor-pointer">
+          {/* خط چپ */}
+          <div className="absolute left-0 bottom-0 w-[2px] h-0 bg-gray-700 transition-all duration-500 group-hover:h-full" />
+
+          {/* خط راست */}
+          <div className="absolute right-0 top-0 w-[2px] h-0 bg-gray-700 transition-all duration-500 group-hover:h-full" />
+
+          <Link href="" className="font-medium p-2 hover:text-gray-700 duration-500 relative inline-block">
+            {/* خط پایین */}
+            <span className="absolute bottom-0 right-0 h-[2px] w-0 bg-gray-700 transition-all duration-500 group-hover:w-full" />
+            {/* خط بالا */}
+            <span className="absolute top-0 left-0 h-[2px] w-0 bg-gray-700 transition-all duration-500 group-hover:w-full" />
             بازطراحی شده توسط مصطفی کمری
           </Link>
         </div>
