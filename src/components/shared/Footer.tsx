@@ -34,19 +34,19 @@ export const Footer: React.FC = () => {
           </div>
         </div>
         <div className="flex gap-4 text-4xl mb-6 text-yellow-200 mt-4">
-          <Link href="">
+          <Link href="" className="hover:scale-110 duration-500">
             <FaFacebook />
           </Link>
-          <Link href="">
+          <Link href="" className="hover:scale-110 duration-500">
             <FaWhatsapp />
           </Link>
-          <Link href="">
+          <Link href="" className="hover:scale-110 duration-500">
             <FaTelegram />
           </Link>
-          <Link href="">
+          <Link href="" className="hover:scale-110 duration-500">
             <FaInstagram />
           </Link>
-          <Link href="">
+          <Link href="" className="hover:scale-110 duration-500">
             <FaFacebookMessenger />
           </Link>
         </div>
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
           {/* خط راست */}
           <div className="absolute right-0 top-0 w-[2px] h-0 bg-gray-700 transition-all duration-500 group-hover:h-full" />
 
-          <Link href="" className="font-medium p-2 hover:text-gray-700 duration-500 relative inline-block">
+          <Link target="_blank" href="https://portfolio-immostafakamari.vercel.app/" className="font-medium p-2 hover:text-gray-700 duration-500 relative inline-block">
             {/* خط پایین */}
             <span className="absolute bottom-0 right-0 h-[2px] w-0 bg-gray-700 transition-all duration-500 group-hover:w-full" />
             {/* خط بالا */}
@@ -72,49 +72,49 @@ export const Footer: React.FC = () => {
         <h4 className="text-2xl mb-4 text-amber-200">دسترسی سریع</h4>
         <div className="flex gap-6 text-base/relaxed">
           <div>
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">خانه</span>
             </Link>
-            <Link href="" className="flex items-center">
+            <Link href="" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">محصولات ما</span>
             </Link>
-            <Link href="" className="flex items-center">
+            <Link href="" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">لیـست خدمات</span>
             </Link>
-            <Link href="" className="flex items-center">
+            <Link href="" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">ملات خشک</span>
             </Link>
-            <Link href="" className="flex items-center">
+            <Link href="" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">لوازم ساختمان سازی</span>
             </Link>
-            <Link href="/agents" className="flex items-center">
+            <Link href="/agents" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">اخذ نمایندگی</span>
             </Link>
           </div>
           <div>
-            <Link href="/questions" className="flex items-center">
+            <Link href="/questions" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">سوالات متداول</span>
             </Link>
-            <Link href="" className="flex items-center">
+            <Link href="" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">آجر و بتن</span>
             </Link>
-            <Link href="/about-us" className="flex items-center">
+            <Link href="/about-us" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">درباره زودفیکس</span>
             </Link>
-            <Link href="/contact-us" className="flex items-center">
+            <Link href="/contact-us" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">ارتباط با ما</span>
             </Link>
-            <Link href="/employment" className="flex items-center">
+            <Link href="/employment" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">فرم استخدام</span>
             </Link>

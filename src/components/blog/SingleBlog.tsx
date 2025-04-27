@@ -39,7 +39,7 @@ const SingleBlog: React.FC<SingleBlogProps> = ({ blog, blogs }) => {
                 <h4 className="text-lg font-bold">مطالب مرتبط</h4>
               </div>
               <div className="flex flex-col">
-                {relatedBlogs.map((item) => (
+                {relatedBlogs.slice(0, 3).map((item) => (
                   <Link
                     key={item.id}
                     href={`/blog/${item.id}`}
