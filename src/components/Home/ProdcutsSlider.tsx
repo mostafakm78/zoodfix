@@ -22,10 +22,10 @@ type ProductsItem = {
 };
 
 const Products: ProductsItem[] = [
-  { image: Ct1, link: '/', title: 'سیمان' },
-  { image: Ct2, link: '/', title: 'محصولات فروشگاهی' },
-  { image: Ct3, link: '/', title: 'ملات خشک' },
-  { image: Ct4, link: '/', title: 'چسب ها' },
+  { image: Ct1, link: '/products?page=1&category=سیمان', title: 'سیمان' },
+  { image: Ct2, link: '/products?page=1&category=محصولات فروشگاهی', title: 'محصولات فروشگاهی' },
+  { image: Ct3, link: '/products?page=1&category=ملات خشک', title: 'ملات خشک' },
+  { image: Ct4, link: '/products?page=1&category=چسب ها', title: 'چسب ها' },
 ];
 
 export const ProductsSlider: React.FC = () => {

@@ -1,8 +1,9 @@
+import NotFound from '@/app/not-found';
 import SingleBlog from '@/components/blog/SingleBlog';
 import { Footer } from '@/components/shared/Footer';
 import { Navbar } from '@/components/shared/Navbar';
 import { StaticImageData } from 'next/image';
-import { notFound } from 'next/navigation';
+
 
 interface Blog {
   image: StaticImageData;
@@ -21,7 +22,7 @@ const SingleBlogPage = async ({ params }: { params: { id: string } }) => {
   const blog = blogs.find((blog: Blog) => blog.id === id);
 
   if (!blog) {
-    return notFound();
+    return NotFound();
   }
 
   return (

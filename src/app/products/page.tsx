@@ -13,10 +13,10 @@ const ProductsPage = async ({ searchParams }: { searchParams: { page?: string; c
   const page = Number(URL_query.page) || 1;
   const category = URL_query.category || null;
 
-  const filteredProducts = category ? products.filter((product: { product: string }) => product.category === category) : products;
-  const ProductsPerPage = 6;
+  const filteredProducts = category ? products.filter((product: { product: string; category: string }) => product.category === category) : products;
 
-  const totalPages = Math.ceil(products.length / ProductsPerPage);
+  const ProductsPerPage = 6;
+  const totalPages = Math.ceil(filteredProducts.length / ProductsPerPage);
 
   if (totalPages > 0 && page > totalPages) redirect('/products?page=1');
 

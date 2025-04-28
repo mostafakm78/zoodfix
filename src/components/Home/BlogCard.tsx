@@ -7,87 +7,80 @@ import 'swiper/css/pagination';
 import './styles.css';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
-// photo
-import One from '../../../public/images/Blog/1.jpg';
-import Two from '../../../public/images/Blog/2.jpg';
-import Three from '../../../public/images/Blog/3.jpg';
-import Four from '../../../public/images/Blog/4.jpg';
-import Five from '../../../public/images/Blog/5.jpg';
-import Six from '../../../public/images/Blog/6.jpg';
-import Seven from '../../../public/images/Blog/7.jpg';
-import Eight from '../../../public/images/Blog/8.jpg';
-
-// type of BlogCard
-type BlogItem = {
-  image: StaticImageData;
+type BlogsList = {
+  image: string;
   title: string;
   view: string;
+  content: string;
+  id: number | string;
+  category: string;
 };
 
-const Blog: BlogItem[] = [
-  { image: One, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
-  { image: Two, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
-  { image: Three, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
-  { image: Four, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
-  { image: Five, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
-  { image: Six, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
-  { image: Seven, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
-  { image: Eight, title: 'پیام تبریک کارخانه زودفیکس', view: '111 بازدید' },
-];
-
 export const BlogCard: React.FC = () => {
+  const [blogs, setBlogs] = useState<BlogsList[]>([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await fetch('http://localhost:4000/blogs');
+        const data = await response.json();
+        setBlogs(data);
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
+  const now = new Date();
+  const iranianDate = new Intl.DateTimeFormat('fa-IR', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(now);
+
   return (
     <>
-      {/* slider and settings  */}
       <Swiper
-        navigation={true}
-        loop={true}
-        autoplay={{
-          delay: 3000,
-        }}
+        navigation
+        loop
+        autoplay={{ delay: 2000 }}
         pagination={{ clickable: true }}
         modules={[Autoplay, Pagination, Navigation]}
         breakpoints={{
-          1200: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          480: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
+          1200: { slidesPerView: 3, spaceBetween: 30 },
+          1024: { slidesPerView: 2, spaceBetween: 30 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
+          480: { slidesPerView: 1, spaceBetween: 10 },
         }}
         className="mySwiper h-[400px]"
       >
-        {/* all blog card in home page with map  */}
-        {Blog.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="bg-third rounded-t-[20px] flex flex-col rounded-b-2xl w-full max-w-[400px]">
-              <div className="relative w-full h-[250px]">
-                <Image src={item.image} alt="Blog Photo" className="object-cover w-full h-full rounded-t-[20px]" />
-                <div className="absolute bottom-0 left-0 w-full h-[80px] bg-gradient-to-t rounded-b-[20px] from-black/70 to-transparent"></div>
-                <div className="absolute bottom-4 right-4 w-[90%] text-white z-10 font-bold text-sm leading-tight break-words text-right line-clamp-2 flex items-center gap-2">
-                  <span className="h-2.5 w-2.5 rounded-full bg-amber-300 inline-block"></span>
-                  {item.title}
+        {blogs.length === 0 ? (
+          <div className="text-center">مطلبی برای نمایش وجود ندارد.</div>
+        ) : (
+          blogs.slice(0, 8).map((item) => (
+            <SwiperSlide key={item.id}>
+              <Link href={`/blog/${item.id}`} className="bg-third rounded-t-[20px] flex flex-col rounded-b-2xl w-full max-w-[400px]">
+                <div className="relative w-full h-[250px]">
+                  <Image src={item.image} width={400} height={400} alt="Blog Photo" className="object-cover w-full h-full rounded-t-[20px]" />
+                  <div className="absolute bottom-0 left-0 w-full h-[80px] bg-gradient-to-t rounded-b-[20px] from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-4 right-4 w-[90%] text-white z-10 font-bold text-sm leading-tight break-words text-right line-clamp-2 flex items-center gap-2">
+                    <span className="h-2.5 w-2.5 rounded-full bg-amber-300 inline-block"></span>
+                    {item.title}
+                  </div>
                 </div>
-              </div>
-              <div className="flex justify-around py-2 opacity-60 text-xs">
-                <span>{item.view}</span>
-                <span>تاریخ</span>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
+                <div className="flex justify-around py-2 opacity-60 text-xs">
+                  <span>{item.view} بازدید</span>
+                  <span>{iranianDate}</span>
+                </div>
+              </Link>
+            </SwiperSlide>
+          ))
+        )}
       </Swiper>
     </>
   );

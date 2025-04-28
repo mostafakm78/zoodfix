@@ -71,40 +71,32 @@ export const Footer: React.FC = () => {
       <div className="flex flex-col lg:mt-44 mt-16">
         <h4 className="text-2xl mb-4 text-amber-200">دسترسی سریع</h4>
         <div className="flex gap-6 text-base/relaxed">
-          <div>
+          <div className='space-y-2'>
             <Link href="/" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">خانه</span>
             </Link>
-            <Link href="" className="flex hover:scale-110 duration-500 items-center">
+            <Link href="/products?page=1" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">محصولات ما</span>
             </Link>
-            <Link href="" className="flex hover:scale-110 duration-500 items-center">
-              <span className="font-semibold mb-1 text-amber-200">ـــ</span>
-              <span className="mr-2 text-background">لیـست خدمات</span>
-            </Link>
-            <Link href="" className="flex hover:scale-110 duration-500 items-center">
+            <Link href='/products?page=1&category=ملات خشک' className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">ملات خشک</span>
             </Link>
-            <Link href="" className="flex hover:scale-110 duration-500 items-center">
+            <Link href='/products?page=1&category=محصولات فروشگاهی' className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
-              <span className="mr-2 text-background">لوازم ساختمان سازی</span>
+              <span className="mr-2 text-background">محصولات فروشگاهی</span>
             </Link>
             <Link href="/agents" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">اخذ نمایندگی</span>
             </Link>
           </div>
-          <div>
+          <div className='space-y-2'>
             <Link href="/questions" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
               <span className="mr-2 text-background">سوالات متداول</span>
-            </Link>
-            <Link href="" className="flex hover:scale-110 duration-500 items-center">
-              <span className="font-semibold mb-1 text-amber-200">ـــ</span>
-              <span className="mr-2 text-background">آجر و بتن</span>
             </Link>
             <Link href="/about-us" className="flex hover:scale-110 duration-500 items-center">
               <span className="font-semibold mb-1 text-amber-200">ـــ</span>
