@@ -15,7 +15,7 @@ const ProductsPage = async ({ searchParams }: { searchParams: { page?: string; c
 
   const filteredProducts = category ? products.filter((product: { product: string; category: string }) => product.category === category) : products;
 
-  const ProductsPerPage = 6;
+  const ProductsPerPage = 9;
   const totalPages = Math.ceil(filteredProducts.length / ProductsPerPage);
 
   if (totalPages > 0 && page > totalPages) redirect('/products?page=1');

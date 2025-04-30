@@ -5,7 +5,6 @@ import { toast } from 'react-toastify';
 import { formItemProduct } from '../../../types/types';
 import { isValidEmail, isValidIranianPhoneNumber } from '../../../validData/validData';
 
-
 const SingleProductForm: React.FC = () => {
   const [formData, setFormData] = useState<formItemProduct>({
     namePerson: '',
@@ -15,6 +14,11 @@ const SingleProductForm: React.FC = () => {
     comment: '',
   });
 
+  const personError = formData.namePerson.length < 5;
+  const phoneError = !isValidIranianPhoneNumber(formData.phone);
+  const emailError = !isValidEmail(formData.email);
+  const titleError = formData.title.length < 4;
+  const commentError = formData.comment.length < 10;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -23,15 +27,15 @@ const SingleProductForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (formData.namePerson.length < 5) {
+    if (personError) {
       return toast.error('اسم شخص یا شرکت باید بالای 5 حرف باشد');
-    } else if (!isValidIranianPhoneNumber(formData.phone)) {
+    } else if (phoneError) {
       return toast.error('لطفا شماره همراه معتبر استفاده کنید');
-    } else if (!isValidEmail(formData.email)) {
+    } else if (emailError) {
       return toast.error('لطفا ایمیل معتبر استفاده کنید');
-    } else if (formData.title.length > 5) {
-      return toast.error('عنوان باید بالای 5 حرف باشد');
-    } else if (formData.comment.length > 10) {
+    } else if (titleError) {
+      return toast.error('موضوع باید بالای 4 حرف باشد');
+    } else if (commentError) {
       return toast.error('توضیحات باید بالای 10 حرف باشد');
     }
 
@@ -61,10 +65,10 @@ const SingleProductForm: React.FC = () => {
           نظر خود را برای ما ارسال کنید
         </p>
       </div>
-      <div className="grid gap-10 text-xl mt-4 opacity-80">
+      <div className="grid gap-10 lg:text-lg text-base mt-4 opacity-80">
         <div>
           <div className="relative mb-10 mt-6 lg:mt-0">
-            <input type="text" id="namePerson" value={formData.namePerson} onChange={handleChange} placeholder=" " className="peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-secondery" />
+            <input type="text" id="namePerson" value={formData.namePerson} onChange={handleChange} placeholder=" " className={`peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none ${personError ? 'focus:border-red-500' : 'focus:border-secondery'}`} />
             <label
               htmlFor="namePerson"
               className="absolute right-4 -top-6 text-sm px-2 text-gray-500 transition-all duration-300
@@ -76,7 +80,7 @@ const SingleProductForm: React.FC = () => {
             </label>
           </div>
           <div className="relative mb-10">
-            <input type="text" id="phone" value={formData.phone} onChange={handleChange} placeholder=" " className="peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-secondery" />
+            <input type="text" id="phone" value={formData.phone} onChange={handleChange} placeholder=" " className={`peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none ${phoneError ? 'focus:border-red-500' : 'focus:border-secondery'}`} />
             <label
               htmlFor="phone"
               className="absolute right-4 -top-6 text-sm  px-2 text-gray-500 transition-all duration-300
@@ -88,7 +92,7 @@ const SingleProductForm: React.FC = () => {
             </label>
           </div>
           <div className="relative mb-10">
-            <input type="email" id="email" value={formData.email} onChange={handleChange} placeholder=" " className="peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-secondery" />
+            <input type="email" id="email" value={formData.email} onChange={handleChange} placeholder=" " className={`peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none ${emailError ? 'focus:border-red-500' : 'focus:border-secondery'}`} />
             <label
               htmlFor="email"
               className="absolute right-4 -top-6 text-sm  px-2 text-gray-500 transition-all duration-300
@@ -100,7 +104,7 @@ const SingleProductForm: React.FC = () => {
             </label>
           </div>
           <div className="relative">
-            <input type="text" id="title" value={formData.title} onChange={handleChange} placeholder=" " className="peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none focus:border-secondery" />
+            <input type="text" id="title" value={formData.title} onChange={handleChange} placeholder=" " className={`peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none ${titleError ? 'focus:border-red-500' : 'focus:border-secondery'}`} />
             <label
               htmlFor="title"
               className="absolute right-4 -top-6 text-sm  px-2 text-gray-500 transition-all duration-300
@@ -113,7 +117,14 @@ const SingleProductForm: React.FC = () => {
           </div>
         </div>
         <div className="relative">
-          <textarea id="comment" rows={5} value={formData.comment} onChange={handleChange} placeholder=" " className="peer w-full py-4 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none h-36 focus:border-secondery resize-none"></textarea>
+          <textarea
+            id="comment"
+            rows={5}
+            value={formData.comment}
+            onChange={handleChange}
+            placeholder=" "
+            className={`peer w-full py-4 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none h-36 ${commentError ? 'focus:border-red-500' : 'focus:border-secondery'} resize-none`}
+          ></textarea>
           <label
             htmlFor="comment"
             className="absolute right-4 -top-6 text-sm px-2 text-gray-500 transition-all duration-300

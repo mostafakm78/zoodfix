@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { PaginationProps } from '../../../types/types';
 
-
 const Pagination = ({ currentPage, totalPages, category }: PaginationProps) => {
   const createPageLink = (page: number) => {
     return `/blog?page=${page}${category ? `&category=${category}` : ''}`;
@@ -16,12 +15,15 @@ const Pagination = ({ currentPage, totalPages, category }: PaginationProps) => {
               قبلی
             </Link>
           )}
-          {Array.from({ length: totalPages }, (_, index) => (
-            <Link key={index + 1} href={createPageLink(index + 1)} className={`${currentPage === index + 1 ? 'bg-secondery' : 'bg-gray-500'} lg:py-2 lg:px-4 p-1.5 hover:scale-110 duration-300 rounded-md text-background`}>
-              {index + 1}
-            </Link>
-          ))}
-
+          {currentPage > 1 && <span>...</span>}
+          {[currentPage, currentPage + 1].map((page) =>
+            page <= totalPages ? (
+              <Link key={page} href={createPageLink(page)} className={`${currentPage === page ? 'bg-secondery' : 'bg-gray-500'} lg:py-2 lg:px-4 p-1.5 hover:scale-110 duration-300 rounded-md text-background`}>
+                {page}
+              </Link>
+            ) : null
+          )}
+          {currentPage < totalPages && <span>...</span>}
           {currentPage < totalPages && (
             <Link href={createPageLink(currentPage + 1)} className="bg-gray-500 lg:py-2 lg:px-4 p-1.5 hover:scale-110 duration-300 rounded-md text-background">
               بعدی
