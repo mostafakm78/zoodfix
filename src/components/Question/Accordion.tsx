@@ -4,13 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
-
-// type of accordionItems
-export type AccordionItemType = {
-  question: string;
-  answer?: string;
-  Link?: string;
-};
+import { AccordionItemType } from '../../../types/types';
 
 // type of AccordionProps recive form accordionItem
 type AccordionProps = {

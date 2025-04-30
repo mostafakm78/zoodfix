@@ -1,10 +1,6 @@
 import Link from 'next/link';
+import { PaginationProps } from '../../../types/types';
 
-type PaginationProps = {
-  currentPage: number;
-  totalPages: number;
-  category: string | null | undefined;
-};
 
 const Pagination = ({ currentPage, totalPages, category }: PaginationProps) => {
   const createPageLink = (page: number) => {

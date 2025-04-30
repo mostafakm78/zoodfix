@@ -1,4 +1,5 @@
-import Accordion, { AccordionItemType } from './Accordion';
+import { AccordionItemType } from '../../../types/types';
+import Accordion from './Accordion';
 
 const Question: React.FC = () => {
     // answer and question array for accordion component

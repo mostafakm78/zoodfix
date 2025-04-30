@@ -5,7 +5,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './styles.css';
 import { Autoplay, Navigation } from 'swiper/modules';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
+import { ProductsItemSliderHome } from '../../../types/types';
 import Link from 'next/link';
 
 // photos
@@ -14,14 +15,7 @@ import Ct2 from '../../../public/images/Ct2.png';
 import Ct3 from '../../../public/images/Ct3.png';
 import Ct4 from '../../../public/images/Ct4.png';
 
-// type of products
-type ProductsItem = {
-  image: StaticImageData;
-  link: string;
-  title: string;
-};
-
-const Products: ProductsItem[] = [
+const Products: ProductsItemSliderHome[] = [
   { image: Ct1, link: '/products?page=1&category=سیمان', title: 'سیمان' },
   { image: Ct2, link: '/products?page=1&category=محصولات فروشگاهی', title: 'محصولات فروشگاهی' },
   { image: Ct3, link: '/products?page=1&category=ملات خشک', title: 'ملات خشک' },

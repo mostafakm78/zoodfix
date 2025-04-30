@@ -1,9 +1,11 @@
-import Appendix from './Appendix';
-import CallInfo from './CallInfo';
-import Course from './Course';
-import HomeInfo from './HomeInfo';
-import PersonalData from './PersonalData';
-import WorkExperience from './WorkExperience';
+import dynamic from 'next/dynamic';
+
+const Appendix = dynamic(() => import('./Appendix'));
+const CallInfo = dynamic(() => import('./CallInfo'));
+const Course = dynamic(() => import('./Course'));
+const HomeInfo = dynamic(() => import('./HomeInfo'));
+const PersonalData = dynamic(() => import('./PersonalData'));
+const WorkExperience = dynamic(() => import('./WorkExperience'));
 
 const Employment = () => {
   return (

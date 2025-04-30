@@ -1,13 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { ExperienceRow } from '../../../types/types';
 
-// type of Row
-interface ExperienceRow {
-  place: string;
-  position: string;
-  duration: string;
-}
 
 const WorkExperience = () => {
   const [rows, setRows] = useState<ExperienceRow[]>([{ place: '', position: '', duration: '' }]);

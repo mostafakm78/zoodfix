@@ -135,10 +135,23 @@
   }
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Vazirmatn, sans-serif;
   font-weight: normal;
+}
+
+.Toastify__toast {
+  font-family: Vazirmatn, sans-serif;
+  width: 450px;
+  font-size: large;
+}
+
+@media screen and (max-width: 760px) {
+  .Toastify__toast {
+    font-family: Vazirmatn, sans-serif;
+    width: 300px;
+    font-size: 13px;
+  }
 }

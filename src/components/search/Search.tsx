@@ -2,27 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { ImSpinner8 } from 'react-icons/im';
+import Image from 'next/image';
+import { BlogsList, ProductItem } from '../../../types/types';
 
 // photo
 import loadingImage from '../../../public/images/Products/loading.jpg';
-import { ImSpinner8 } from 'react-icons/im';
-import Image from 'next/image';
-
-type ProductItem = {
-  id: number;
-  title: string;
-  image: string;
-  category: string;
-  weight: string;
-};
-
-type BlogsList = {
-  title: string;
-  view: string;
-  content: string;
-  id: number | string;
-  category: string;
-};
 
 type SearchProps = {
   searchWord: string | null;

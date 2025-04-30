@@ -6,17 +6,10 @@ import { FaChevronLeft } from 'react-icons/fa6';
 import { useTransition } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ImSpinner8 } from 'react-icons/im';
+import { ProductItem } from '../../../types/types';
 
 // photo
 import loadingImage from '../../../public/images/Products/loading.jpg';
-
-type ProductItem = {
-  id: number;
-  title: string;
-  image: string;
-  category: string;
-  weight: string;
-};
 
 interface productsProps {
   currentProducts: ProductItem[];

@@ -1,20 +1,13 @@
 import Link from 'next/link';
 import { FaRegBookmark } from 'react-icons/fa6';
 import { AiOutlineDownSquare } from 'react-icons/ai';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
+import { BlogsList } from '../../../types/types';
 
-interface Blog {
-  image: StaticImageData;
-  title: string;
-  view: string;
-  content: string;
-  id: number;
-  category: string;
-}
 
 interface SingleBlogProps {
-  blog: Blog;
-  blogs: Blog[];
+  blog: BlogsList;
+  blogs: BlogsList[];
 }
 
 const SingleBlog: React.FC<SingleBlogProps> = ({ blog, blogs }) => {

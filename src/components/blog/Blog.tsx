@@ -6,18 +6,10 @@ import { useTransition } from 'react';
 import { BiNews } from 'react-icons/bi';
 import { ImSpinner8 } from 'react-icons/im';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { BlogsList } from '../../../types/types';
 
 // photo
 import loadingImage from '../../../public/images/Products/loading.jpg';
-
-type BlogsList = {
-  image: string;
-  title: string;
-  view: string;
-  content: string;
-  id: number | string;
-  category: string;
-};
 
 type BlogProps = {
   blogs: BlogsList[];

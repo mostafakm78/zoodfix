@@ -8,7 +8,7 @@ import { NavbarHome } from '@/components/Home/NavbarHome';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <NavbarHome />
       <Slider />
       <WhySection />
@@ -16,6 +16,6 @@ export default function Home() {
       <Blog />
       <Customers />
       <Footer />
-    </div>
+    </>
   );
 }

@@ -4,14 +4,10 @@ import Link from 'next/link';
 
 // photo
 import loadingImage from '../../../public/images/Products/loading.jpg';
+import { MdEmail } from 'react-icons/md';
+import { FaPhoneAlt } from 'react-icons/fa';
+import { ProductItem } from '../../../types/types';
 
-type ProductItem = {
-  id: number;
-  title: string;
-  image: string;
-  category: string;
-  weight: string;
-};
 
 interface SingleProductProps {
   product: ProductItem;
@@ -61,7 +57,33 @@ const SingleProduct = ({ product }: SingleProductProps) => {
         </div>
 
         {/* product form component  */}
-        <SingleProductForm />
+        <div className="flex flex-col gap-8 mt-16">
+          <h4 className="text-3xl font-bold">ثبت سفارش :</h4>
+          <div className="flex lg:flex-row flex-col items-center gap-8 lg:gap-0 justify-center lg:justify-between">
+            {/* right section  */}
+            <div className="lg:w-2/4 w-full lg:self-start flex flex-col items-center">
+              <span className="lg:text-2xl text-xl font-bold shadow-lg bg-gray-700 text-background py-4 px-6 rounded-4xl">برای ثبت سفارش برای ما پیام ارسال کنید</span>
+              <div className="flex flex-col">
+                <div className="flex flex-col mt-10 shadow-lg space-y-2 rounded-xl text-background bg-secondery py-2 px-4 space-x-2 lg:text-xl">
+                  <span>شماره تماس :</span>
+                  <div className="flex space-x-2 items-center">
+                    <FaPhoneAlt />
+                    <span>09169799533</span>
+                  </div>
+                </div>
+                <div className="flex flex-col mt-10 shadow-lg space-y-2 rounded-xl text-background bg-secondery py-2 px-4 space-x-2 lg:text-xl">
+                  <span>ایمیل :</span>
+                  <div className="flex space-x-2 items-center">
+                    <MdEmail />
+                    <span>Mostafamf555@gmail.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* form section  */}
+            <SingleProductForm />
+          </div>
+        </div>
       </section>
     </div>
   );

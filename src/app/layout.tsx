@@ -1,3 +1,4 @@
+import { ToastContainer } from 'react-toastify';
 import './globals.css';
 
 export default function RootLayout({
@@ -7,7 +8,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body>{children}</body>
+      <body>
+        {children}
+        <ToastContainer rtl autoClose={3000} position="top-center" />
+      </body>
     </html>
   );
 }
