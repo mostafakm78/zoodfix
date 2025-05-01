@@ -20,7 +20,7 @@ export const BlogCard: React.FC = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch('http://localhost:4000/blogs');
+        const response = await fetch(`${process.env.NEXT}/blogs`);
         const data = await response.json();
         setBlogs(data);
       } catch (error) {

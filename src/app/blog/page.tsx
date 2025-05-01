@@ -5,7 +5,7 @@ import { Navbar } from '@/components/shared/Navbar';
 import { redirect } from 'next/navigation';
 
 const BlogPage = async ({ searchParams }: { searchParams: { page?: string; category?: string } }) => {
-  const data = await fetch('http://localhost:4000/blogs');
+  const data = await fetch(`${process.env.NEXT}/blogs`);
   const allBlogs = await data.json();
 
   const pages = await searchParams;

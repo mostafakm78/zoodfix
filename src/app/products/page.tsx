@@ -5,7 +5,7 @@ import { Navbar } from '@/components/shared/Navbar';
 import { redirect } from 'next/navigation';
 
 const ProductsPage = async ({ searchParams }: { searchParams: { page?: string; category?: string } }) => {
-  const data = await fetch('http://localhost:4000/products');
+  const data = await fetch(`${process.env.NEXT}/products`);
   const products = await data.json();
 
   const URL_query = await searchParams;
