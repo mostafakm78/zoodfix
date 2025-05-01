@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'nprogress/nprogress.css';
 
 @font-face {
   font-family: Vazirmatn;
@@ -155,3 +156,13 @@ body {
     font-size: 13px;
   }
 }
+
+#nprogress .bar {
+  background: #1100ff;
+  height: 3px;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #16a34a, 0 0 5px #16a34a;
+}
+

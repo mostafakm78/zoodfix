@@ -48,3 +48,10 @@ export type AccordionItemType = {
   answer?: string;
   Link?: string;
 };
+
+export type ContactUsFormItem = {
+  fullName: string;
+  phone: string;
+  title: string;
+  message: string;
+};
