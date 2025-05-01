@@ -36,7 +36,7 @@ const ContactUsForm = () => {
     }
 
     try {
-      const res = await fetch(`${process.env.NEXT}/contact`, {
+      const res = await fetch(`http://localhost:4000/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

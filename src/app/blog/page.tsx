@@ -1,11 +1,17 @@
-import Blog from '@/components/blog/Blog';
+import { Suspense } from 'react';
 import Pagination from '@/components/blog/Pagination';
 import { Footer } from '@/components/shared/Footer';
 import { Navbar } from '@/components/shared/Navbar';
 import { redirect } from 'next/navigation';
+import { ImSpinner8 } from 'react-icons/im';
+import Image from 'next/image';
+import Blog from '@/components/blog/Blog';
 
-const BlogPage = async ({ searchParams }: { searchParams: { page?: string; category?: string } }) => {
-  const data = await fetch(`${process.env.NEXT}/blogs`);
+// photo
+import loadingImage from '../../../public/images/Products/loading.jpg';
+
+const BlogPage = async ({ searchParams }: { searchParams: Promise<{ page?: string; category?: string }> }) => {
+  const data = await fetch(`http://localhost:4000/blogs`);
   const allBlogs = await data.json();
 
   const pages = await searchParams;
@@ -28,7 +34,18 @@ const BlogPage = async ({ searchParams }: { searchParams: { page?: string; categ
   return (
     <>
       <Navbar />
-      <Blog blogs={currentBlogs} allblogs={allBlogs} activeCategory={category} />
+      <Suspense
+        fallback={
+          <div className="flex items-center text-2xl min-h-[300px] space-x-3 justify-center">
+            <div className="relative text-center rounded-full text-gray-500 w-[100px] h-[100px]">
+              <Image src={loadingImage} alt="loading image" className="rounded-full" width={100} height={100} />
+              <ImSpinner8 className="animate-spin absolute h-[120px] w-[130px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-300" />
+            </div>
+          </div>
+        }
+      >
+        <Blog blogs={currentBlogs} allblogs={allBlogs} activeCategory={category} />
+      </Suspense>
       <Pagination currentPage={page} totalPages={totalPages} category={category} />
       <Footer />
     </>

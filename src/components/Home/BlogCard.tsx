@@ -12,7 +12,6 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { BlogsList } from '../../../types/types';
 
-
 export const BlogCard: React.FC = () => {
   const [blogs, setBlogs] = useState<BlogsList[]>([]);
 
@@ -20,7 +19,7 @@ export const BlogCard: React.FC = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch(`${process.env.NEXT}/blogs`);
+        const response = await fetch(`http://localhost:4000/blogs`);
         const data = await response.json();
         setBlogs(data);
       } catch (error) {
