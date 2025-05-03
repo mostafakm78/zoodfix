@@ -114,13 +114,13 @@ export const Navbar: React.FC = () => {
             <div>
               <span className="text-background lg:block hidden">پشتیبانی سریع</span>
               <div className="flex justify-center items-center gap-2">
-                <Link href="tel:+989169799533" className="flex justify-center items-center active:scale-105 hover:scale-105 duration-200 gap-2">
+                <Link href="tel:+989169799533" className="flex justify-center items-center active:scale-110 active:duration-500 hover:scale-105 hover:duration-200 gap-2">
                   <span className="font-bold lg:block hidden text-background">09169799533</span>
                   <span className="bg-rose-500 lg:w-8 lg:h-8 w-6 h-6 rounded-full flex items-center justify-center">
                     <IoCall className="lg:text-xl text-background" />
                   </span>
                 </Link>
-                <button onClick={() => setShowSearchBar(!showSearchBar)} className="bg-background lg:w-8 lg:h-8 w-6 h-6 rounded-full flex items-center justify-center">
+                <button onClick={() => setShowSearchBar(!showSearchBar)} className="bg-background lg:w-8 lg:h-8 w-6 h-6 rounded-full active:scale-110 active:duration-500 hover:scale-105 hover:duration-200 flex items-center justify-center">
                   <IoMdSearch className="lg:text-xl text-foreground opacity-70 hover:rotate-90 cursor-pointer duration-200" />
                 </button>
               </div>
@@ -165,13 +165,13 @@ export const Navbar: React.FC = () => {
           <div>
             <span className="text-background lg:block hidden">پشتیبانی سریع</span>
             <div className="flex justify-center items-center gap-2">
-              <Link href="tel:+989169799533" className="flex justify-center items-center active:scale-105 hover:scale-105 duration-200 gap-2">
+              <Link href="tel:+989169799533" className="flex justify-center items-center active:scale-110 active:duration-500 hover:scale-105 hover:duration-200 gap-2">
                 <span className="font-bold text-background lg:block hidden">09169799533</span>
                 <span className="bg-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
                   <IoCall className="text-xl text-background" />
                 </span>
               </Link>
-              <button onClick={() => setShowSearchBar(!showSearchBar)} className="bg-background w-8 h-8 rounded-full flex items-center justify-center">
+              <button onClick={() => setShowSearchBar(!showSearchBar)} className="bg-background active:scale-110 active:duration-500 hover:scale-105 hover:duration-200 w-8 h-8 rounded-full flex items-center justify-center">
                 <IoMdSearch className="text-xl text-foreground opacity-70 hover:rotate-90 cursor-pointer duration-200" />
               </button>
             </div>

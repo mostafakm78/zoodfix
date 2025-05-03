@@ -139,7 +139,7 @@ const SingleProductForm: React.FC = () => {
         </div>
       </div>
       <div className="w-full flex items-center justify-center">
-        <button type="submit" className="py-2 cursor-pointer px-10 active:scale-105 active:bg-secondery hover:scale-105 hover:bg-secondery duration-300 bg-gray-700 text-lg text-background rounded-xl">
+        <button type="submit" className="py-2 cursor-pointer px-10 active:scale-105 active:duration-700 active:bg-secondery hover:scale-105 hover:bg-secondery hover:duration-300 bg-gray-700 text-lg text-background rounded-xl">
           ثبت فرم
         </button>
       </div>

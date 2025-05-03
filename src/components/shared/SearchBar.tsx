@@ -27,7 +27,7 @@ export const SearchBar = ({ setClose }: SearchBarProps) => {
           <RiCloseLargeFill className="text-black text-2xl cursor-pointer" />
         </button>
         <div onKeyDown={(e) => e.key === 'Enter' && handleSearch()} className="flex items-center justify-between rounded-3xl shadow-md p-1 bg-gray-100 xl:w-4/12 lg:w-6/12">
-          <input placeholder="عبارت جستجو را وارد نمایید" className="p-1 outline-none w-full" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+          <input placeholder="عبارت جستجو را وارد نمایید" className="p-1 placeholder:text-sm lg:placeholder:text-base text-base lg:text-lg outline-none w-full" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
           <button onClick={handleSearch}>
             <IoMdSearch className="text-2xl ml-2 cursor-pointer" />
           </button>
