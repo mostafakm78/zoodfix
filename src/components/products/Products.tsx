@@ -80,7 +80,7 @@ const Prodcuts = ({ currentProducts, allProducts, activeCategory }: productsProp
                   <div className="absolute bottom-0 left-0 w-full h-[80px] bg-gradient-to-t rounded-b-[20px] from-black/70 to-transparent"></div>
                 </div>
                 <div className="flex lg:flex-col items-center space-y-2 px-4 justify-around py-4 text-xs">
-                  <h3 className="text-foreground font-bold opacity-85 text-sm break-words text-right line-clamp-2">{prod.title}</h3>
+                  <h3 className="text-foreground font-bold opacity-85 text-sm text-right line-clamp-1">{prod.title}</h3>
                   <span className="text-foreground opacity-70 text-sm break-words text-justify line-clamp-2">{prod.category}</span>
                 </div>
               </Link>
