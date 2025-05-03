@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'صفحه محصولات',
     description: 'صفحه محصولات زودفیکس',
     images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
-    url: `https://yourdomain.com/products`,
+    url: `https://zoodfix.vercel.app/products`,
     type: 'website',
   },
 };

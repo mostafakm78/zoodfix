@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body>
-        <Suspense fallback={<div>در حال بارگزاری</div>}>
+        <Suspense fallback={<div>...</div>}>
           <ProgressBar />
         </Suspense>
         {children}

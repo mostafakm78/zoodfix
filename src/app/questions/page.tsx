@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'سوالات متداول',
     description: 'صفحه سوالات متداول زودفیکس',
     images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
-    url: `https://yourdomain.com/questions`,
+    url: `https://zoodfix.vercel.app/questions`,
     type: 'website',
   },
 };

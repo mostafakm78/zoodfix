@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       title: blog.title,
       description: blog.content,
       images: [blog.image],
-      url: `https://yourdomain.com/blogs/${id}`,
+      url: `https://zoodfix.vercel.app/blogs/${id}`,
       type: 'article',
     },
   };

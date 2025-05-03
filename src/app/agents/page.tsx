@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'دریافت نمایندگی',
     description: 'صفحه دریافت نمایندگی زودفیکس',
     images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
-    url: `https://yourdomain.com/agents`,
+    url: `https://zoodfix.vercel.app/agents`,
     type: 'website',
   },
 };

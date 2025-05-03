@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'صفحه بلاگ ها',
     description: 'صفحه بلاگ های زودفیکس',
     images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
-    url: `https://yourdomain.com/blog`,
+    url: `https://zoodfix.vercel.app/blog`,
     type: 'article',
   },
 };

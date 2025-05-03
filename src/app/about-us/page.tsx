@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'درباره ما',
     description: 'صفحه درباره ما و اطلاعات زودفیکس',
     images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
-    url: `https://yourdomain.com/about-us`,
+    url: `https://zoodfix.vercel.app/about-us`,
     type: 'website',
   },
 };

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'ارتباط با ما',
     description: 'صفحه ارتباط با ما زودفیکس',
     images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
-    url: `https://yourdomain.com/contact-us`,
+    url: `https://zoodfix.vercel.app/contact-us`,
     type: 'website',
   },
 };

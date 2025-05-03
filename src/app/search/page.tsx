@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'جستجو',
     description: 'صفحه جستجو زودفیکس',
     images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
-    url: `https://yourdomain.com/search`,
+    url: `https://zoodfix.vercel.app/search`,
     type: 'website',
   },
 };

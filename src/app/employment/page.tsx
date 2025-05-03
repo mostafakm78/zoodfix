@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'استخدام',
     description: 'صفحه استخدام زودفیکس',
     images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
-    url: `https://yourdomain.com/employment`,
+    url: `https://zoodfix.vercel.app/employment`,
     type: 'website',
   },
 };
