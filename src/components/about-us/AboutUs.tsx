@@ -17,7 +17,7 @@ const AboutUs: React.FC = () => {
 
   return (
     <div className="container mx-auto">
-      <section className="bg-background xl:px-60 px-20 pb-20 pt-20">
+      <section className="bg-background xl:px-60 px-8 pb-20 pt-20">
         <h3 className="w-full text-xl rounded bg-secondery text-background py-2 px-4">درباره زودفیکس</h3>
 
         <div className="mt-14 px-4 font-semibold space-y-4">
