@@ -24,7 +24,7 @@ export const WhySection = () => {
               اتوماتیک، موفق به تولید طیف وسیعی از ملات‌ها و چسب‌های ساختمانی با بالاترین استانداردهای ملی شده است.
             </p>
             <div className="flex space-x-6 mt-6">
-              <Link href="" className="flex items-center bg-secondery hover:scale-110 duration-200 text-sm text-background px-4 py-1.5 rounded-full">
+              <Link href="/about-us" className="flex items-center bg-secondery hover:scale-110 duration-200 text-sm text-background px-4 py-1.5 rounded-full">
                 بیشتر بدانید
                 <IoIosArrowBack className="mr-2" />
               </Link>
