@@ -27,7 +27,9 @@ const SingleProductForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (personError) {
+    if (formData.namePerson.length === 0 && formData.comment.length === 0 && formData.email.length === 0 && formData.phone.length === 0 && formData.title.length === 0) {
+      return toast.error('لطفا همه فیلد ها را پر کنید');
+    } else if (personError) {
       return toast.error('اسم شخص یا شرکت باید بالای 5 حرف باشد');
     } else if (phoneError) {
       return toast.error('لطفا شماره همراه معتبر استفاده کنید');

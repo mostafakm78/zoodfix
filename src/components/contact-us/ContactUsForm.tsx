@@ -25,7 +25,9 @@ const ContactUsForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (fullNameError) {
+    if (formData.fullName.length === 0 && formData.phone.length === 0 && formData.title.length === 0 && formData.message.length === 0) {
+      return toast.error('لطفا همه فیلد ها را پر کنید');
+    } else if (fullNameError) {
       return toast.error('اسم شخص یا شرکت باید بالای 5 حرف باشد');
     } else if (phoneError) {
       return toast.error('لطفا شماره همراه معتبر استفاده کنید');

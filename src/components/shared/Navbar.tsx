@@ -114,7 +114,7 @@ export const Navbar: React.FC = () => {
             <div>
               <span className="text-background lg:block hidden">پشتیبانی سریع</span>
               <div className="flex justify-center items-center gap-2">
-                <Link href="" className="flex justify-center items-center hover:scale-105 duration-200 gap-2">
+                <Link href="tel:+989169799533" className="flex justify-center items-center active:scale-105 hover:scale-105 duration-200 gap-2">
                   <span className="font-bold lg:block hidden text-background">09169799533</span>
                   <span className="bg-rose-500 lg:w-8 lg:h-8 w-6 h-6 rounded-full flex items-center justify-center">
                     <IoCall className="lg:text-xl text-background" />
@@ -165,7 +165,7 @@ export const Navbar: React.FC = () => {
           <div>
             <span className="text-background lg:block hidden">پشتیبانی سریع</span>
             <div className="flex justify-center items-center gap-2">
-              <Link href="" className="flex justify-center items-center hover:scale-105 duration-200 gap-2">
+              <Link href="tel:+989169799533" className="flex justify-center items-center active:scale-105 hover:scale-105 duration-200 gap-2">
                 <span className="font-bold text-background lg:block hidden">09169799533</span>
                 <span className="bg-rose-500 w-8 h-8 rounded-full flex items-center justify-center">
                   <IoCall className="text-xl text-background" />
