@@ -22,7 +22,7 @@ export interface ExperienceRow {
 }
 
 export type ProductItem = {
-  id: number;
+  id: number | string;
   title: string;
   image: string;
   category: string;

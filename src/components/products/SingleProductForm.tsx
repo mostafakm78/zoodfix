@@ -40,7 +40,7 @@ const SingleProductForm: React.FC = () => {
     }
 
     try {
-      const res = await fetch(`http://localhost:4000/BuyForm`, {
+      const res = await fetch(`${process.env.NEXT}/BuyForm`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

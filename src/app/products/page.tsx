@@ -6,12 +6,25 @@ import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import { Suspense } from 'react';
 import { ImSpinner8 } from 'react-icons/im';
+import { Metadata } from 'next';
 
 // photo
 import loadingImage from '../../../public/images/Products/loading.jpg';
 
+export const metadata: Metadata = {
+  title: 'صفحه محصولات',
+  description: 'صفحه محصولات زودفیکس',
+  openGraph: {
+    title: 'صفحه محصولات',
+    description: 'صفحه محصولات زودفیکس',
+    images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
+    url: `https://yourdomain.com/products`,
+    type: 'website',
+  },
+};
+
 const ProductsPage = async ({ searchParams }: { searchParams: Promise<{ page?: string; category?: string }> }) => {
-  const data = await fetch(`http://localhost:4000/products`);
+  const data = await fetch(`${process.env.NEXT}/products`);
   const products = await data.json();
 
   const URL_query = await searchParams;

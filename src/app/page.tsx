@@ -6,6 +6,7 @@ import { Slider } from '@/components/Home/Slider';
 import { WhySection } from '@/components/Home/WhySection';
 import { NavbarHome } from '@/components/Home/NavbarHome';
 
+
 export default function Home() {
   return (
     <>

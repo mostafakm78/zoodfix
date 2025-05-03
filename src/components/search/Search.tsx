@@ -22,7 +22,7 @@ const Search = ({ searchWord }: SearchProps) => {
     if (searchWord) {
       setIsPending(true);
 
-      fetch(`http://localhost:4000/blogs?q=${searchWord}`)
+      fetch(`${process.env.NEXT}/blogs?q=${searchWord}`)
         .then((response) => response.json())
         .then((data) => {
           const resualt = data.filter((item: BlogsList) => item.title.includes(searchWord));
@@ -33,7 +33,7 @@ const Search = ({ searchWord }: SearchProps) => {
           setIsPending(false);
         });
 
-      fetch(`http://localhost:4000/products?q=${searchWord}`)
+      fetch(`${process.env.NEXT}/products?q=${searchWord}`)
         .then((response) => response.json())
         .then((data) => {
           const resualt = data.filter((item: ProductItem) => item.title.includes(searchWord));

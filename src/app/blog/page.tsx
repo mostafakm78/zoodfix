@@ -6,12 +6,25 @@ import { redirect } from 'next/navigation';
 import { ImSpinner8 } from 'react-icons/im';
 import Image from 'next/image';
 import Blog from '@/components/blog/Blog';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'بلاگ ها',
+  description: 'صفحه بلاگ های زود فیکس',
+  openGraph: {
+    title: 'صفحه بلاگ ها',
+    description: 'صفحه بلاگ های زودفیکس',
+    images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
+    url: `https://yourdomain.com/blog`,
+    type: 'article',
+  },
+};
 
 // photo
 import loadingImage from '../../../public/images/Products/loading.jpg';
 
 const BlogPage = async ({ searchParams }: { searchParams: Promise<{ page?: string; category?: string }> }) => {
-  const data = await fetch(`http://localhost:4000/blogs`);
+  const data = await fetch(`${process.env.NEXT}/blogs`);
   const allBlogs = await data.json();
 
   const pages = await searchParams;

@@ -2,12 +2,18 @@ import { ToastContainer } from 'react-toastify';
 import './globals.css';
 import ProgressBar from '@/components/shared/ProgressBar';
 import { Suspense } from 'react';
-import logo from '../../public/images/logo.png';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'zoodfix',
+export const metadata: Metadata = {
+  title: 'Zoodfix / صفحه اصلی',
   description: 'محصولات ساختمانی',
-  icon: logo,
+  openGraph: {
+    title: 'صفحه اصلی',
+    description: 'صفحه اصلی سایت زودفیکس',
+    images: [{ url: '/images/Products/loading.jpg', alt: 'تصویر سایت' }],
+    url: `https://yourdomain.com`,
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
