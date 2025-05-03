@@ -15,7 +15,7 @@ import Slider2 from '../../../public/images/slider2.jpg';
 export const Slider: React.FC = () => {
   return (
     // home page slider
-    <div className="relative lg:[&_.swiper-button-next]:ml-24 font-extrabold [&_.swiper-button-next]:hover:scale-110 lg:[&_.swiper-button-prev]:mr-24 [&_.swiper-button-prev]:hover:scale-110">
+    <div className="relative bg-secondery rounded-b-3xl lg:[&_.swiper-button-next]:ml-24 font-extrabold [&_.swiper-button-next]:hover:scale-110 lg:[&_.swiper-button-prev]:mr-24 [&_.swiper-button-prev]:hover:scale-110">
       {/* slider settings  */}
       <Swiper
         spaceBetween={30}
