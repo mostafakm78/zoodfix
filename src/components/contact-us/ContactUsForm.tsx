@@ -113,7 +113,7 @@ const ContactUsForm = () => {
           پیام شما :
         </label>
       </div>
-      <button type="submit" className="cursor-pointer hover:bg-secondery bg-foreground text-background py-2 px-4 text-lg rounded-xl hover:scale-105 hover:opacity-90 duration-300">
+      <button type="submit" className="cursor-pointer hover:bg-secondery active:bg-secondery bg-foreground text-background py-2 px-4 text-lg rounded-xl active:scale-105 hover:scale-105 active:opacity-90 hover:opacity-90 duration-300">
         ارسال پیام
       </button>
     </form>
