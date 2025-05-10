@@ -10,7 +10,7 @@ import Why from '../../../public/images/why.png';
 
 export const WhySection = () => {
   return (
-    <motion.div initial={{ opacity: 0, y: -100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
+    <motion.div initial={{ opacity: 0, y: -100 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
       <div className="w-full bg-background shadow-lg lg:p-20 py-10 lg:mb-10 mb-14 lg:rounded-b-[90%]">
         <div className="flex lg:flex-row flex-col justify-center lg:justify-baseline space-y-6 lg:space-y-0 lg:mb-10 items-center lg:p-12">
           <div className="flex flex-col lg:items-start items-center w-full space-y-2 xl:w-2/12 lg:w-3/12">

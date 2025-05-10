@@ -9,8 +9,7 @@ import PicDot from '../../../public/images/pic-dot.png';
 
 export const Products: React.FC = () => {
   return (
-    <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
-      
+    <motion.div initial={{ opacity: 0, y: 100 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
       <section className="container mx-auto lg:px-32 px-14">
         {/* products title */}
         <div className="flex flex-col space-y-3">

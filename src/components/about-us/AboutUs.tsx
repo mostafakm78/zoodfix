@@ -42,7 +42,7 @@ const AboutUs: React.FC = () => {
 
           <AnimatePresence>
             {showVideo && VideoPlayer && (
-              <motion.div key="video" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 30 }} transition={{ duration: 0.5 }} className="w-full max-w-3xl overflow-hidden rounded-2xl shadow-lg">
+              <motion.div key="video" initial={{ opacity: 0, y: 30 }} viewport={{ once: true }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 30 }} transition={{ duration: 0.5 }} className="w-full max-w-3xl overflow-hidden rounded-2xl shadow-lg">
                 <VideoPlayer />
               </motion.div>
             )}

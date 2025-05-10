@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
     // background for footer
     <div className="md:bg-[url('/images/footer.png')] md:bg-transparent bg-secondery bg-cover lg:px-48 px-12 py-20 lg:justify-items-end grid grid-cols-1 lg:grid-cols-2">
       {/* right section  */}
-      <motion.div initial={{ opacity: 0, x: 80 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.3 }}>
+      <motion.div initial={{ opacity: 0, x: 80 }} viewport={{ once: true }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.3 }}>
         <div className="flex flex-col lg:mt-44 items-center lg:items-start md:mt-64">
           <h3 className="text-2xl text-amber-200 mb-3">درباره زود فیکس</h3>
           <p className="text-base/relaxed lg:w-10/12 text-justify text-background mb-6">
@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
       </motion.div>
 
       {/* left section  */}
-      <motion.div initial={{ opacity: 0, x: 80 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.3 }}>
+      <motion.div initial={{ opacity: 0, x: 80 }} viewport={{ once: true }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.3 }}>
         <div className="flex flex-col lg:mt-44 mt-16">
           <h4 className="text-2xl mb-4 text-amber-200">دسترسی سریع</h4>
           <div className="flex gap-6 text-base/relaxed">

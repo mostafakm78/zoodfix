@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 export const Blog: React.FC = () => {
   return (
     <>
-      <motion.div initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
+      <motion.div initial={{ opacity: 0, y: 100 }} viewport={{ once: true }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }}>
         {/* blog section on home page */}
         <section className="container mx-auto lg:px-32 px-14 mt-20">
           {/* title and view all button */}
