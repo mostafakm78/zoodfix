@@ -70,7 +70,7 @@ const SingleProductForm: React.FC = () => {
       <div className="grid gap-10 lg:text-lg text-base mt-4 opacity-80">
         <div>
           <div className="relative mb-10 mt-6 lg:mt-0">
-            <input type="text" id="namePerson" value={formData.namePerson} onChange={handleChange} placeholder=" " className={`peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none ${personError ? 'focus:border-red-500' : 'focus:border-secondery'}`} />
+            <input type="text" id="namePerson" value={formData.namePerson} onChange={handleChange} placeholder="" className={`peer w-full py-2 px-5 rounded-2xl border-2 border-gray-300 bg-third text-black outline-none ${personError ? 'focus:border-red-500' : 'focus:border-secondery'}`} />
             <label
               htmlFor="namePerson"
               className="absolute right-4 -top-6 text-sm px-2 text-gray-500 transition-all duration-300
