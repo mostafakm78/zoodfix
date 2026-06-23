@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 ZoodFix — E-Commerce UI
 
-## Getting Started
+A pixel-accurate rebuild of the ZoodFix e-commerce platform, focused on practicing production-grade Next.js architecture, strict TypeScript, and performance optimization.
 
-First, run the development server:
+🔗 [Visit Site](https://zoodfix.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📁 Screenshots
+
+>
+> | 🏠 Home | 🛍️ Products |
+> |---|---|
+> | ![Home](./screenshots/home.png) | ![Products](./screenshots/products.png) |
+
+---
+
+## 🧠 Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Language | TypeScript (strict mode) |
+| Styling | Tailwind CSS |
+| Data | JSON mock fixtures |
+| Deployment | Vercel |
+
+---
+
+## ⚡ Technical Highlights
+
+- **Type-safe data layer**: Custom TypeScript interfaces for all product, category, and cart entities — defined in a dedicated `/types` directory
+- **Component architecture**: Fully decomposed UI with reusable, single-responsibility components across product cards, layout, and navigation
+- **Performance**: Lighthouse 90+ via Next.js Image optimization, static generation for product pages, and mobile-first responsive layout
+- **Data fixtures**: Structured mock data in `/validData` separating UI logic from data concerns — ready for API replacement
+- **Strict TypeScript**: No `any` types — all props, API shapes, and state fully typed throughout
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                 # Next.js App Router routes
+│   ├── page.tsx         # Homepage
+│   └── [category]/      # Category and product pages
+├── components/          # Reusable UI components
+├── types/               # TypeScript interfaces and types
+├── validData/           # Structured mock data fixtures
+└── public/              # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Setup & Run Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Clone the repository
+git clone https://github.com/mostafakm78/zoodfix.git
 
-## Learn More
+# Navigate to project directory
+cd zoodfix
 
-To learn more about Next.js, take a look at the following resources:
+# Install dependencies
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Start the development server
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Roadmap
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ✅ Shipped
+- [x] Pixel-accurate responsive UI
+- [x] TypeScript-strict component architecture
+- [x] Reusable component system
+- [x] Structured mock data layer
+- [x] Mobile-first responsive design
+
+### 🔜 Upcoming
+- [ ] Cart state management with Redux Toolkit
+- [ ] Connect to a real REST API
+- [ ] Product search and filter functionality
+- [ ] Unit tests with React Testing Library
+
+---
+
+## 📜 License
+
+This project is open-source under the [MIT License](LICENSE).
+
+---
+
+## 🧑‍💻 Author
+
+**Mostafa Kamari** — Frontend Developer · React & Next.js
+
+[GitHub](https://github.com/mostafakm78) · [LinkedIn](https://linkedin.com/in/mostafa-kamari) · [Portfolio](https://portfolio-immostafakamari.vercel.app)
